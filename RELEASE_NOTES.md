@@ -6,16 +6,25 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
-## 2026-09-19 — Email alerts for warn/error notifications
+## 2026-09-19 — Email alerts for account events, trades, and daily summaries
 
 ### Added
 
-- Optional email alerts in Settings → Notifications. When enabled, warn- and error-level alerts are also sent to your Google login email (info-level messages stay Slack-only).
+- Optional email alerts in Settings → Notifications. When enabled, you receive:
+  - buy/sell fill notices
+  - a daily market-close summary (fills, open portfolio, day and total P/L)
+  - warn/error operational alerts
+- Account emails (always sent when mail is configured, no Settings toggle required):
+  - sign-up received / welcome
+  - admin approve or reject
+  - admin disable or remove account
+  - trader enabled / disabled
 - Enabling email alerts sends a one-time test message to confirm delivery before the preference is saved.
 
 ### Notes
 
-- Email alerts are off by default. Turn them on from Settings when you want inbox copies of important alerts.
+- Trade and daily-summary emails are off by default until you enable them in Settings.
+- Existing Slack notifications are unchanged.
 - Invite-only access is unchanged.
 
 ---
