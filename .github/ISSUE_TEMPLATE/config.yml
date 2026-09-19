@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Try Robo Trader
+    url: https://robo-trader.egedsoft.co.il
+    about: Sign in with Google to request invite-only access.
+  - name: How to open and track issues
+    url: https://github.com/guymaim/robo-trader/blob/main/docs/opening-and-tracking-issues.md
+    about: Step-by-step guide for filing and following issues.

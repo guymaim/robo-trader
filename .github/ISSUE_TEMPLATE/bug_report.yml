@@ -1,0 +1,58 @@
+name: Bug report
+description: Something broke or behaved unexpectedly.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please open issues — they help everyone.
+        Do **not** paste passwords, API keys, or full account numbers.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug in plain language.
+      placeholder: When I clicked …, the page showed …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: I expected …
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps help us fix it faster.
+      placeholder: |
+        1. Go to …
+        2. Click …
+        3. See error …
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Trading mode (if known)
+      options:
+        - Not sure
+        - Not signed in / landing only
+        - Pending approval
+        - Paper
+        - Live
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser / device
+      placeholder: e.g. Chrome 128 on macOS, Safari on iPhone
+  - type: textarea
+    id: extras
+    attributes:
+      label: Screenshots or extra detail
+      description: Drag images here. Redact any sensitive information.

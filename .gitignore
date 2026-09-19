@@ -1,0 +1,5 @@
+# Public community / docs repo — no application code.
+.DS_Store
+*.pem
+.env
+.env.*

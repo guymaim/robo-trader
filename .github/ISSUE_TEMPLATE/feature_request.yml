@@ -1,0 +1,35 @@
+name: Feature request
+description: Suggest an idea or improvement.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature ideas are welcome. Please open issues — even rough ideas help.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or motivation
+      description: What are you trying to do that is hard or missing today?
+      placeholder: I want to … but currently I have to …
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How should it work from a user’s point of view?
+      placeholder: It would be great if …
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: Optional — other approaches that could work.
+  - type: textarea
+    id: extras
+    attributes:
+      label: Extra context
+      description: Mockups, screenshots, or links (optional).

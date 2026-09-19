@@ -1,0 +1,34 @@
+name: Question
+description: Ask how something works or what to expect.
+title: "[Question]: "
+labels: ["question", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Questions are welcome. If you are waiting on admin approval or stuck on signup, say so here.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      placeholder: How do I … ? / What does … mean?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What have you already tried? Which page were you on?
+  - type: dropdown
+    id: area
+    attributes:
+      label: Related area
+      options:
+        - Sign up / approval
+        - Connecting a broker
+        - Paper trading
+        - Live trading
+        - Docs / this GitHub repo
+        - Other
+    validations:
+      required: true
