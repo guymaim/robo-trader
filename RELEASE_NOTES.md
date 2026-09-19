@@ -6,12 +6,11 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
-## 2026-09-19 — Email alerts for account events, trades, and daily summaries
+## 2026-09-19 — Email alerts for account events and daily summaries
 
 ### Added
 
 - Optional email alerts in Settings → Notifications. When enabled, you receive:
-  - buy/sell fill notices
   - a daily market-close summary (fills, open portfolio, day and total P/L)
   - warn/error operational alerts
 - Account emails (always sent when mail is configured, no Settings toggle required):
@@ -23,7 +22,8 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ### Notes
 
-- Trade and daily-summary emails are off by default until you enable them in Settings.
+- Buy/sell fills stay on Slack only (not emailed).
+- Daily-summary and warn/error emails are off by default until you enable them in Settings.
 - Existing Slack notifications are unchanged.
 - Invite-only access is unchanged.
 
