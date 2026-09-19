@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-19 — Re-signup after account removal
+
+### Fixed
+
+- After an administrator disables and removes an account, signing in again with the same Google account no longer shows **Forbidden — session user not found**. The old session is cleared and the public sign-in page is shown so you can request access again.
+
+### Notes
+
+- Invite-only access is unchanged: after removal, an administrator must approve the email again before a new account is created.
+
+---
+
 ## 2026-09-19 — Email alerts for account events and daily summaries
 
 ### Added
