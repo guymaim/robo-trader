@@ -6,6 +6,19 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-19 — Email alerts on by default
+
+### Changed
+
+- Daily summary and warn/error email alerts are **on by default** for your Google login address. Turn them off anytime in Settings → Notifications.
+
+### Notes
+
+- Buy/sell fills still stay on Slack only.
+- Account emails (sign-up, approval, disable) were already sent without this toggle.
+
+---
+
 ## 2026-09-19 — Admin Remove user button
 
 ### Fixed
@@ -47,7 +60,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 ### Notes
 
 - Buy/sell fills stay on Slack only (not emailed).
-- Daily-summary and warn/error emails are off by default until you enable them in Settings.
+- Daily-summary and warn/error emails default on (see “Email alerts on by default” above); disable in Settings to opt out.
 - Existing Slack notifications are unchanged.
 - Invite-only access is unchanged.
 
