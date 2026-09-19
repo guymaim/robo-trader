@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-19 — Admin Remove user button
+
+### Fixed
+
+- On the Admin users list, **Remove** now works reliably. Click **Remove**, then **Confirm remove?** within a few seconds. (Some browsers block pop-up confirm dialogs, which previously made Remove appear to do nothing.)
+
+### Notes
+
+- Removing a user stops their traders and drops them from the allow-list. They cannot sign in again until an administrator re-approves their email.
+
+---
+
 ## 2026-09-19 — Re-signup after account removal
 
 ### Fixed
