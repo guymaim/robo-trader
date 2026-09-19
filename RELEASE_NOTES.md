@@ -6,6 +6,20 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-19 — Email alerts for warn/error notifications
+
+### Added
+
+- Optional email alerts in Settings → Notifications. When enabled, warn- and error-level alerts are also sent to your Google login email (info-level messages stay Slack-only).
+- Enabling email alerts sends a one-time test message to confirm delivery before the preference is saved.
+
+### Notes
+
+- Email alerts are off by default. Turn them on from Settings when you want inbox copies of important alerts.
+- Invite-only access is unchanged.
+
+---
+
 ## 2026-09-19 — Public community repository
 
 ### Added
