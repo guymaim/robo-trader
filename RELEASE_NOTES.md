@@ -6,6 +6,24 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-20 (later) — Runs, language, safer account actions
+
+### Added
+
+- **Stop a running simulation** from its run page, the Runs list or the New Run page. It is shown as "cancelled", not failed. ([#31](https://github.com/guymaim/robo-trader/issues/31))
+- **English / Hebrew switch** in the header with a clear selected state; it translates the header menu, run pages and the rule explainer. ([#82](https://github.com/guymaim/robo-trader/issues/82))
+- **Authenticator step-up:** enabling a trader or saving/deleting broker credentials now asks for your Authenticator code if you have one set up. Stopping a trader never needs a code. ([#103](https://github.com/guymaim/robo-trader/issues/103))
+- New runs appear on the Runs page immediately, in-progress runs show live progress, and runs whose worker stopped are marked failed with an explanation. ([#30](https://github.com/guymaim/robo-trader/issues/30), [#32](https://github.com/guymaim/robo-trader/issues/32), [#33](https://github.com/guymaim/robo-trader/issues/33))
+
+### Fixed
+
+- **Runs and charts:** the Runs table fits on one screen and becomes cards on phones; trade prices are rounded consistently; gate-blocker and short-run charts are easier to read. ([#27](https://github.com/guymaim/robo-trader/issues/27), [#35](https://github.com/guymaim/robo-trader/issues/35), [#76](https://github.com/guymaim/robo-trader/issues/76), [#80](https://github.com/guymaim/robo-trader/issues/80), [#81](https://github.com/guymaim/robo-trader/issues/81))
+- **Rules and explanations:** rule pages, run pages and logs use the Robo Trader name; New Run rule criteria have readable names and AND/OR is a dropdown; the Hebrew explainer displays mixed English and numbers correctly; explanations match each rule's actual values; rule names no longer show a backtest return figure. Simulated results now carry a short "hypothetical, not actual trading" notice. ([#28](https://github.com/guymaim/robo-trader/issues/28), [#43](https://github.com/guymaim/robo-trader/issues/43), [#47](https://github.com/guymaim/robo-trader/issues/47), [#55](https://github.com/guymaim/robo-trader/issues/55), [#59](https://github.com/guymaim/robo-trader/issues/59), [#69](https://github.com/guymaim/robo-trader/issues/69), [#79](https://github.com/guymaim/robo-trader/issues/79), [#89](https://github.com/guymaim/robo-trader/issues/89))
+- **Set as default** now works for your own rules and is remembered per user; the max-hold "Decide" dialog no longer shows "held 4/0 trading bars"; the log page shows honest connection status and reconnects automatically. ([#36](https://github.com/guymaim/robo-trader/issues/36), [#121](https://github.com/guymaim/robo-trader/issues/121), [#45](https://github.com/guymaim/robo-trader/issues/45))
+- **Sign-in:** the server now verifies that every agreement was accepted and records which version of each document you agreed to. Password and secret fields are in proper forms. ([#41](https://github.com/guymaim/robo-trader/issues/41), [#62](https://github.com/guymaim/robo-trader/issues/62))
+
+---
+
 ## 2026-09-20 — Security, clarity and accuracy fixes from our QA pass
 
 ### Fixed
