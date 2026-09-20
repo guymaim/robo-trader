@@ -6,6 +6,25 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-20 — Security, clarity and accuracy fixes from our QA pass
+
+### Fixed
+
+- **Sign-in and sessions:** Repeated failed sign-in or 2FA attempts are now temporarily blocked. Sign-out is now a button in the menu (a link can no longer sign you out by accident), redirects after sign-in only ever stay inside the app, and security contact details are published at the standard `/.well-known/security.txt` location. ([#83](https://github.com/guymaim/robo-trader/issues/83), [#84](https://github.com/guymaim/robo-trader/issues/84), [#85](https://github.com/guymaim/robo-trader/issues/85), [#86](https://github.com/guymaim/robo-trader/issues/86))
+- **Privacy in what you see:** The header no longer shows a build code, and broker account numbers and server file paths are hidden from logs, activity and simulation progress. ([#26](https://github.com/guymaim/robo-trader/issues/26), [#44](https://github.com/guymaim/robo-trader/issues/44), [#67](https://github.com/guymaim/robo-trader/issues/67))
+- **Simulations and results:** Short simulations no longer show an annualised return, and positions still open when a simulation ends are reported separately instead of counting as trades in win rate. The New Run form now stops you with a clear message when dates or capital are invalid, rules you save or upload are checked the same way, and the "Rules used" panel shows normal characters. ([#34](https://github.com/guymaim/robo-trader/issues/34), [#65](https://github.com/guymaim/robo-trader/issues/65), [#66](https://github.com/guymaim/robo-trader/issues/66), [#75](https://github.com/guymaim/robo-trader/issues/75), [#77](https://github.com/guymaim/robo-trader/issues/77), [#78](https://github.com/guymaim/robo-trader/issues/78))
+- **Status and Settings:** "Approve buys" and the "open confirm" rule are shown separately, safeguards appear as status chips, unset broker cards stay collapsed until you click Set up, and the email and Slack notification badges reflect their real state. ([#37](https://github.com/guymaim/robo-trader/issues/37), [#40](https://github.com/guymaim/robo-trader/issues/40), [#48](https://github.com/guymaim/robo-trader/issues/48), [#49](https://github.com/guymaim/robo-trader/issues/49), [#50](https://github.com/guymaim/robo-trader/issues/50))
+- **Times and counts:** Times on the home and trader pages now show their time zone, the live-days count matches on both pages, and weekends show dashes instead of mixed 0.00% figures. ([#38](https://github.com/guymaim/robo-trader/issues/38), [#46](https://github.com/guymaim/robo-trader/issues/46), [#56](https://github.com/guymaim/robo-trader/issues/56))
+- **Pages:** A missing simulation run now shows a proper not-found page. Signed-in users no longer see "Sign in" on public pages (they see "Back to desk"), and the Logs page wording is clearer for regular users. ([#57](https://github.com/guymaim/robo-trader/issues/57), [#60](https://github.com/guymaim/robo-trader/issues/60), [#74](https://github.com/guymaim/robo-trader/issues/74))
+
+### Changed
+
+- The Accessibility Statement now says plainly which parts of the app are not yet accessible, and the Privacy Policy is more detailed. Legal pages remain drafts pending review.
+- The home-page preview card is clearly marked as example data, not a result.
+- The developer API reference page is no longer available.
+
+---
+
 ## 2026-09-19 — Email alerts on by default
 
 ### Changed
