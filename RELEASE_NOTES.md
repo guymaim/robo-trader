@@ -6,6 +6,19 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-21 — English-only site and a currency of your choice
+
+### Added
+
+- **Choose your display currency.** Trader pages show your values in US dollars and, underneath, converted to a currency you pick: on the trader status page (next to the exchange-rate note) or in Settings. Israeli shekel stays the default, so nothing changes until you choose another. Available: ILS, EUR, GBP, CAD, AUD, CHF, JPY, SEK, NOK, DKK, PLN, INR, SGD, HKD, MXN, BRL, or USD only (no conversion). The choice is remembered in your browser, so it applies per browser rather than per account.
+- Converted amounts come with a note that the rate is indicative (from Yahoo Finance, with its time) and for information only. US dollars remain the main value everywhere.
+
+### Changed
+
+- **The website is now English only.** The English / Hebrew switch (added earlier today) has been removed, along with the Hebrew text on the rule explainer.
+
+---
+
 ## 2026-09-20 (evening) — Invitations, two-factor sign-in, accessibility, better emails
 
 ### Added
