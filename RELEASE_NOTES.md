@@ -6,6 +6,21 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-20 (evening) — Invitations, two-factor sign-in, accessibility, better emails
+
+### Added
+
+- **Invite by email:** admins can invite someone by email. They get a welcome message and, when they sign in with Google using that address and accept the agreements, their account is already approved. Invitations expire after 14 days. ([#120](https://github.com/guymaim/robo-trader/issues/120))
+- **Two-factor sign-in for new accounts:** accounts created from 21 September 2026 must set up an Authenticator app before using Robo Trader; existing accounts see a reminder to do the same. Changing your Authenticator now asks for a code from the current one, and administrators can reset two-factor authentication for someone who lost their device. ([#112](https://github.com/guymaim/robo-trader/issues/112))
+- **Automatic trading permission:** new accounts start without permission to switch their trader to automatic buying and selling; an administrator can allow it per person. Existing accounts are unaffected. Stopping a trader, requiring approval, selling now and restarting are never blocked. ([#107](https://github.com/guymaim/robo-trader/issues/107))
+
+### Changed
+
+- Emails from Robo Trader now have a consistent, branded layout with a logo, a button to the app and links to the privacy policy, terms and notification settings. ([#111](https://github.com/guymaim/robo-trader/issues/111))
+- **Accessibility:** charts come with a written summary of the key figures and a data table; menus, sortable table headers, dialogs and run links work fully with the keyboard; text and field borders are easier to read, especially in the light theme; the live log viewer has a Pause button and no longer reads out every line by default. The accessibility statement now lists what was checked and what is still missing. ([#116](https://github.com/guymaim/robo-trader/issues/116))
+
+---
+
 ## 2026-09-20 (later) — Runs, language, safer account actions
 
 ### Added
