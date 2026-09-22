@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-22 — Take profit as soon as the target is reached
+
+### Changed
+
+- **Take-profit now happens during the trading day, not only near the close.** For traders on the "450% optimizer winner" strategy, when a position reaches its take-profit target (+30%), the trader sells the take-profit portion at its next price check (within about 5 minutes) instead of waiting for the end of the day. Trailing stops and other exits work the same as before.
+
+### Notes
+
+- This uses the trader's regular price checks. No take-profit order is left waiting at the broker.
+
+---
+
 ## 2026-09-22 — More reliable overnight Interactive Brokers reconnects, and a manual reconnect option
 
 ### Fixed
