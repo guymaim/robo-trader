@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-22 — Up to 3 Alpaca paper traders per account
+
+### Added
+
+- **Run up to three Alpaca paper traders.** In Settings, use **Add Alpaca trader** to add a second or third Alpaca trader next to your first. Each trader has its own card, its own trading settings and its own start/stop, and its own status page. ([#119](https://github.com/guymaim/robo-trader/issues/119))
+- **Each trader needs its own Alpaca paper API keys.** Create a separate Alpaca paper account (with its own keys) for every trader you add.
+- **One paper account, one trader.** An Alpaca paper account should be linked to only one Robo Trader trader, so two traders never trade the same account. If you try to save API keys that are already used by another of your traders, you get a clear message instead. Removing a trader frees its keys and its slot for reuse.
+- **Limit of three.** At three traders the **Add Alpaca trader** button is disabled and explains why; remove one to add another.
+- Paper accounts only, as before. Your existing Alpaca trader is not touched: it stays your first trader with the same settings, and Interactive Brokers traders work exactly as they did.
+
+---
+
 ## 2026-09-21 — English-only site and a currency of your choice
 
 ### Added
