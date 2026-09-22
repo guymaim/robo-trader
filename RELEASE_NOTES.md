@@ -6,6 +6,22 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-22 — More reliable overnight Interactive Brokers reconnects, and a manual reconnect option
+
+### Fixed
+
+- **Interactive Brokers gateways now reconnect automatically most nights**, instead of occasionally needing someone to notice and step in the next day. This affects both live and paper IBKR traders.
+
+### Added
+
+- **Restart your Interactive Brokers connection yourself.** In Settings, next to **Restart trader**, there's now a checkbox — "Also restart the connection to Interactive Brokers" — for when a gateway looks stuck or disconnected. It briefly interrupts and reconnects just the broker connection, separately from the trader itself.
+
+### Notes
+
+- Interactive Brokers still requires you to approve a login on your phone roughly once a week, for their own security reasons — this is unchanged and unrelated to the fix above.
+
+---
+
 ## 2026-09-22 — Up to 3 Alpaca paper traders per account
 
 ### Added
