@@ -12,6 +12,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 - **Two-factor authentication (2FA) is now optional for signing up and for paper trading.** You're only required to set up an authenticator app before live (real-money) trading: connecting, enabling or approving buys on a live Interactive Brokers trader. Without 2FA you'll see "2FA required before live trading" with a link to set it up. Stopping a trader or selling is never blocked. ([#144](https://github.com/guymaim/robo-trader/issues/144))
 - **The daily summary email now arrives as a formatted email with the Robo Trader logo.** Your key figures are at the top, with tables of the day's buys, sells and open positions, and a button to that trader's own status page (including your second and third Alpaca traders). The log-style first line is gone. Warning and error alert emails get the same look. ([#133](https://github.com/guymaim/robo-trader/issues/133))
+- **"Save name" moved to Settings.** Rename a trader from its card in Settings (each Alpaca trader has its own field). The trader page still shows the name and has a "Rename in Settings" link. Names you already saved are unchanged. ([#148](https://github.com/guymaim/robo-trader/issues/148))
 
 ### Added
 
@@ -20,6 +21,8 @@ For how we maintain this file, see the project’s internal contributor rules (`
 - **See what happened after Sell now.** After you press Sell now, the trader page shows the request as *Queued*, with roughly how long until the trader's next check. It then shows *Sold* or *Refused by broker* with the broker's reason. The button is disabled while a request for that stock is waiting, so it can't be sent twice.
 - **See each position's trailing-stop price.** The Portfolio table on the trader page has a new **Trail stop** column. It shows the price at which the trader would sell each stock if its trailing stop is hit, using the same calculation the trader uses. Hover over it to see how far that is below the current price. The stop moves up as the stock makes new highs and never moves down. ([#149](https://github.com/guymaim/robo-trader/issues/149))
 - **Admins can add rule files by picking them from a list.** They tick rule files from the server's rules folder (with readable names) instead of typing file names. ([#142](https://github.com/guymaim/robo-trader/issues/142))
+- **Admins can allow or block live (real-money) trading per user.** A user who is blocked sees a clear message in Settings and cannot connect or enable a live trader. Paper trading, stopping a trader and selling are never affected, and a live trader that is already running is not stopped. Everyone stays allowed until an admin changes it. ([#146](https://github.com/guymaim/robo-trader/issues/146))
+- **Admins can limit how many Alpaca traders a user may have.** When you reach the limit, Settings explains why you cannot add another. Lowering a limit never stops or removes traders you already have. Nothing changes for anyone until an admin sets a limit. ([#147](https://github.com/guymaim/robo-trader/issues/147))
 
 ### Notes
 
