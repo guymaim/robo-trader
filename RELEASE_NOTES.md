@@ -17,6 +17,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 - **"Sign out everywhere else"** in Settings → Security signs out all your other sessions (other browsers and devices) and keeps you signed in on this one. Replacing your authenticator app also signs out your other sessions.
 - **See what happened after Sell now.** After you press Sell now, the trader page shows the request as *Queued*, with roughly how long until the trader's next check. It then shows *Sold* or *Refused by broker* with the broker's reason. The button is disabled while a request for that stock is waiting, so it can't be sent twice.
+- **See each position's trailing-stop price.** The Portfolio table on the trader page has a new **Trail stop** column. It shows the price at which the trader would sell each stock if its trailing stop is hit, using the same calculation the trader uses. Hover over it to see how far that is below the current price. The stop moves up as the stock makes new highs and never moves down. ([#149](https://github.com/guymaim/robo-trader/issues/149))
 - **Admins can add rule files by picking them from a list.** They tick rule files from the server's rules folder (with readable names) instead of typing file names. ([#142](https://github.com/guymaim/robo-trader/issues/142))
 
 ### Notes
