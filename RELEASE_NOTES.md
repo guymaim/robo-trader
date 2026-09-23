@@ -6,6 +6,26 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-23 — Two-factor only for live trading, "Sign out everywhere", Sell now status, nicer daily emails
+
+### Changed
+
+- **Two-factor authentication (2FA) is now optional for signing up and for paper trading.** You're only required to set up an authenticator app before live (real-money) trading: connecting, enabling or approving buys on a live Interactive Brokers trader. Without 2FA you'll see "2FA required before live trading" with a link to set it up. Stopping a trader or selling is never blocked. ([#144](https://github.com/guymaim/robo-trader/issues/144))
+- **The daily summary email now arrives as a formatted email with the Robo Trader logo.** Your key figures are at the top, with tables of the day's buys, sells and open positions, and a button to that trader's own status page (including your second and third Alpaca traders). The log-style first line is gone. Warning and error alert emails get the same look. ([#133](https://github.com/guymaim/robo-trader/issues/133))
+
+### Added
+
+- **"Sign out everywhere else"** in Settings → Security signs out all your other sessions (other browsers and devices) and keeps you signed in on this one. Replacing your authenticator app also signs out your other sessions.
+- **See what happened after Sell now.** After you press Sell now, the trader page shows the request as *Queued*, with roughly how long until the trader's next check. It then shows *Sold* or *Refused by broker* with the broker's reason. The button is disabled while a request for that stock is waiting, so it can't be sent twice.
+- **Admins can add rule files by picking them from a list.** They tick rule files from the server's rules folder (with readable names) instead of typing file names. ([#142](https://github.com/guymaim/robo-trader/issues/142))
+
+### Notes
+
+- If an administrator resets your 2FA, you're signed out everywhere. Paper trading keeps working, and live trading waits until you set 2FA up again.
+- The new email look and the Sell now result details reach Interactive Brokers traders with their next update.
+
+---
+
 ## 2026-09-22 — Take profit as soon as the target is reached
 
 ### Changed
