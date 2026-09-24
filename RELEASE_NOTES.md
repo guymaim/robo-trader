@@ -6,6 +6,19 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-24 — Sector colors in your portfolio, clearer performance notes, simulations wait in line
+
+### Changed
+
+- **The Portfolio table shows each position's sector as a colored square.** The color matches that sector's slice in the Sector allocation chart on the same page, so you can see at a glance which positions make up each slice. Hover over the square (or use a screen reader) to get the sector name. ([#152](https://github.com/guymaim/robo-trader/issues/152))
+- **Simulations wait in line instead of being refused.** If someone else's simulation is already running when you start one, yours is now *queued*: the run page shows its place in line and it starts on its own when a slot frees up. You can cancel a queued run. You can still run one simulation of your own at a time. ([#110](https://github.com/guymaim/robo-trader/issues/110))
+
+### Added
+
+- **A performance note next to your account figures.** Your desk and each trader page now say plainly what the equity, P&L, return and "vs QQQ / SPY" numbers are: they come from your broker account (paper accounts use simulated fills, not real money), they may be delayed, and past performance does not indicate future results. Simulation results keep their "Hypothetical performance" note. ([#89](https://github.com/guymaim/robo-trader/issues/89))
+
+---
+
 ## 2026-09-24 — Find your saved rules in the rule list
 
 ### Fixed
