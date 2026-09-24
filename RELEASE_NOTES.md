@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-24 — Two-factor setup keeps the code you scanned
+
+### Fixed
+
+- **Setting up two-factor authentication (2FA) no longer breaks if you leave the page halfway through.** Before, if you scanned the barcode in your authenticator app, left Settings → Security before typing the 6-digit code, then came back and clicked **Show QR** again, you got a new barcode. The code from your first scan was then rejected as invalid. Now, for 10 minutes, you get the same barcode again, so the code from your app works. After 10 minutes you get a new barcode; scan that one instead.
+
+---
+
 ## 2026-09-24 — Code to turn off a trader, table and Settings fixes
 
 ### Changed
