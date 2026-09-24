@@ -6,6 +6,20 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-24 — Code to turn off a trader, table and Settings fixes
+
+### Changed
+
+- **Turning off a trader now asks for your authenticator code, like turning it on.** If you've set up two-factor authentication (2FA), **Disable** on a trader's Settings card asks for your code. If you haven't set up 2FA, you can still turn a trader off without one. Turning on *approval before buying* never asks for a code, so you can always stop new automatic buys right away. ([#103](https://github.com/guymaim/robo-trader/issues/103))
+
+### Fixed
+
+- **Buttons in sorted tables work again.** After you sorted a table, for example Admin → Users, clicking buttons in its rows (such as **Options**) sometimes did nothing. Sorting no longer interferes with clicks.
+- **Escape closes a user's Options panel** on Admin → Users right after you open it.
+- **The trader name box in Settings shows the name you can edit.** On traders you hadn't renamed yet (for example Interactive Brokers traders), the box showed the default name as grey hint text that disappeared when you typed. It now holds the actual name, so you can select and change it. ([#148](https://github.com/guymaim/robo-trader/issues/148))
+
+---
+
 ## 2026-09-24 — Sector colors in your portfolio, clearer performance notes, simulations wait in line
 
 ### Changed
