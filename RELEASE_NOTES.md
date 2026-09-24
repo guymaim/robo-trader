@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-24 — Find your saved rules in the rule list
+
+### Fixed
+
+- **Rules you saved yourself now always show the name you saved them under.** Before, a rule you edited and saved (for example `custom_20260923_2025`) could show up in the New run, Settings and admin rule lists with only a name made from its settings, like `qqq-above-ma20-trailing-20-tp-30-hold-60d`. That made it hard to find. Now your saved name is always added at the end: `qqq-above-ma20-trailing-20-tp-30-hold-60d-custom-20260923-2025`. Built-in rules keep their current names.
+
+---
+
 ## 2026-09-23 — Two-factor only for live trading, "Sign out everywhere", Sell now status, nicer daily emails
 
 ### Changed
