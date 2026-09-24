@@ -6,6 +6,32 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-25 — Add money to your broker account; returns that ignore deposits and withdrawals
+
+### Added
+
+- **You can now add money to your broker account, and Robo Trader notices by itself.** Deposit at Alpaca or Interactive Brokers as usual; nothing to set up or type in. The new cash is used to **buy more stocks** at the next scans. A deposit never makes the trader **sell** anything.
+- **Total return is now a true time-weighted return (TWR),** the same measure IBKR PortfolioAnalyst shows. Deposits and withdrawals no longer count as profit or loss. A **TWR | MWR** switch on the trader page also shows the money-weighted return (your own experience, which depends on *when* you added money). Hover over "Money you put in" to see each deposit and withdrawal.
+- **"Money you put in" and "Profit $"** on the trader page: what you put in (starting money + deposits − withdrawals) and what the strategy actually made on it.
+- **Deposits and withdrawals are marked on the equity chart** (⬆ / ⬇), and the QQQ / SPY comparison lines receive the same money on the same day, so the comparison stays fair.
+- **Each recorded deposit or withdrawal sends you a short notification.** If it wasn't one (for example a large dividend), an admin can mark it "not a deposit" and the numbers correct themselves.
+- **Non-USD deposits (for example ₪ at Interactive Brokers):** the trader page shows a banner and you get one alert a day until you convert the money to USD in IBKR (Trade → FX). Robo Trader never trades currencies itself, and shekels are never counted as money it can spend.
+
+### Changed
+
+- **Today's P&L excludes money you added or withdrew today.** Before, a $10,000 deposit showed up as "+$10,000 today" for one day.
+- **A withdrawal no longer looks like a loss.** It cannot trip the daily-loss stop, cannot make the trader cut position sizes as if the market had crashed, and no longer wipes the equity chart's history (a large withdrawal used to be mistaken for a paper-account reset).
+- **The daily summary email** now shows Total return (TWR, with MWR), Profit and Money put in.
+- **"Total P&L" no longer drifts after about 60 days.** The starting value of your account is now recorded once, so the number keeps measuring from your real start. Traders running longer than that may see a corrected figure.
+- The help pages for Alpaca and Interactive Brokers have a new **"Adding money"** section.
+
+### Notes
+
+- **Transferring shares in (ACATS) is not a deposit.** Shares you transfer in are adopted and managed by the trader, including being sold under the strategy's exit rules. Ask before transferring if that is not what you want.
+- The starting value recorded for existing traders is the same figure the page showed before, so your totals do not jump at the switch.
+
+---
+
 ## 2026-09-24 — Two-factor setup keeps the code you scanned
 
 ### Fixed
