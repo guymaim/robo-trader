@@ -97,6 +97,7 @@ Subscribe to an issue (Watch / Subscribe on the issue page) to get email when th
 | [Opening & tracking issues](docs/opening-and-tracking-issues.md) | How to report and follow work |
 | [Release notes](RELEASE_NOTES.md) | What changed for users, newest first |
 | [About this repository](docs/about-this-repo.md) | What belongs here (and what does not) |
+| [Chrome extension privacy policy](docs/chrome-extension-privacy.md) | What the Robo Trader Chrome extension uses, stores and shares |
 
 ---
 
