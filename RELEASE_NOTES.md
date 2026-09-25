@@ -6,7 +6,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
-## 2026-09-26 — Guided setup picks a rule file, phone layout, daily summary email and security fixes
+## 2026-09-26 — Guided setup picks a rule file, phone layout, daily summary email and fixes
 
 ### Changed
 
@@ -25,7 +25,6 @@ For how we maintain this file, see the project’s internal contributor rules (`
 ### Security
 
 - **Visits over plain `http://` are sent to `https://`** with the same address, so sign-in and consent pages are not used over an unencrypted connection ([#169](https://github.com/guymaim/robo-trader/issues/169)).
-- **Incomplete form submissions are rejected quickly** instead of holding the connection open ([#172](https://github.com/guymaim/robo-trader/issues/172)).
 
 ---
 
