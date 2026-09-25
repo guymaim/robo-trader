@@ -6,6 +6,17 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-25 — Sign in without ticking the agreement boxes again
+
+### Changed
+
+- **Signing in no longer asks you to tick the five agreement boxes every time** (18+, Terms of Use, Privacy Policy, Risk Disclosure and Investment Disclaimer, and "software, not a broker"). You agree once when you **sign up**, and that agreement is kept on record. Signing in is now a single click on **Sign in with Google**. ([#171](https://github.com/guymaim/robo-trader/issues/171))
+- **Signing up works as before:** all five boxes are still required.
+- **You are only asked again when a document changes.** If we update the Terms, Privacy Policy, Risk Disclosure or Investment Disclaimer, you will see a reminder and be asked to confirm the new version.
+- **If we have no record of you agreeing,** for example an account created before we kept these records, you are asked to confirm the agreements once before you can continue.
+
+---
+
 ## 2026-09-25 — Add money to your broker account; returns that ignore deposits and withdrawals
 
 ### Added
