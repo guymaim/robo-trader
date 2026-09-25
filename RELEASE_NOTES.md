@@ -6,6 +6,22 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-25 — Interactive Brokers live: optional automatic sign-in, no more phone approvals
+
+### Added
+
+- **IBKR live can now sign in by itself.** Until now, every time the Interactive Brokers connection restarted (updates, restarts, and IBKR's own weekly re-authentication) you had to approve an IB Key notification on your phone, and trading waited until you did. You can now give Robo Trader your IBKR **authenticator setup key** instead, and it completes the sign-in for you. Set it up from **Settings → IBKR Live (real money)**; the new guide **Help → IBKR automatic sign-in** walks through enabling Mobile Authenticator at IBKR step by step.
+- **It is optional and you stay in control.** A checkbox on the IBKR Live card turns automatic sign-in on or off. Off is exactly today's behaviour (IB Key on your phone). Turning it off restarts the connection and asks for one approval on your phone. IB Key stays active at IBKR as your backup, and the guide tells you to keep the same key in your phone's authenticator app.
+- The setup key is encrypted in your browser together with your IBKR password, with your vault passphrase. Robo Trader's servers cannot read it.
+
+### Notes
+
+- Available for **IBKR Live** only. Paper accounts do not ask for a second factor.
+- IBKR offers Mobile Authenticator by region. If your Secure Login System page shows only IB Key, the guide includes the message to send IBKR support to have it enabled.
+- If automatic sign-in fails three times in a row, Robo Trader stops trying, alerts you, and the status page shows what happened. Trading resumes once you fix the key or switch back to IB Key.
+
+---
+
 ## 2026-09-25 — Add money to your broker account; returns that ignore deposits and withdrawals
 
 ### Added
