@@ -6,6 +6,29 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-26 — Guided setup picks a rule file, phone layout, daily summary email and security fixes
+
+### Changed
+
+- **Guided Alpaca setup now asks for a rule file.** A new step lets you pick the rules your trader follows, with **robo_trader07** preselected. A new trader is never left without rules: if you skip the choice, it uses robo_trader07. Existing traders keep their current rules ([#164](https://github.com/guymaim/robo-trader/issues/164)).
+- **Guided setup asks whether to allow automatic buy and sell.** On **paper** accounts it is allowed by default, so trades run without asking you first. On **live** (real-money) accounts it still starts off, and every existing live safeguard stays in place. An admin decision for your account still wins ([#165](https://github.com/guymaim/robo-trader/issues/165)).
+
+### Fixed
+
+- **The daily summary email now reports the right trading day.** An email sent before the market opened, or on a weekend, used to summarize the new day before anything had traded, so it showed no buys, no sells and a 0% day. It now summarizes the last completed trading session, with that session's date, buys, sells and day P/L ([#175](https://github.com/guymaim/robo-trader/issues/175)). After the close, the email now arrives at about 16:15 New York time instead of 16:00.
+- **The trader page shows P/L in % on phones.** On narrow screens the Portfolio table only showed P/L in dollars. The percentage now appears under the dollar amount for both unrealized and today's P/L ([#174](https://github.com/guymaim/robo-trader/issues/174)).
+- **Negative amounts read -$76.72** instead of $-76.72 on the trader, home and run pages.
+- **Run pages fit on a phone screen.** A long run name no longer pushes the whole page sideways, and the trades table scrolls inside its own box ([#162](https://github.com/guymaim/robo-trader/issues/162)).
+- **The "admin only" error page shows clean text** instead of garbled characters ([#161](https://github.com/guymaim/robo-trader/issues/161)).
+- **Opening `/static/` no longer loops** between redirects; it shows a plain "not found" page ([#170](https://github.com/guymaim/robo-trader/issues/170)).
+
+### Security
+
+- **Visits over plain `http://` are sent to `https://`** with the same address, so sign-in and consent pages are not used over an unencrypted connection ([#169](https://github.com/guymaim/robo-trader/issues/169)).
+- **Incomplete form submissions are rejected quickly** instead of holding the connection open ([#172](https://github.com/guymaim/robo-trader/issues/172)).
+
+---
+
 ## 2026-09-25 — Interactive Brokers live: optional automatic sign-in, no more phone approvals
 
 ### Added
