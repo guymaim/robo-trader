@@ -10,7 +10,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ### Changed
 
-- **Rule files are renamed so the name says how the rule behaves.** Names combine how long a rule holds a stock (short, mid, long) with its style, for example `balanced-long-hold` or `aggressive-mid-hold`. Rules that switch approach with market conditions start with `adaptive`. The rule you knew as robo_trader07 is now **aggressive-mid-hold-quick-profit**, and robo_trader09_balanced is now **balanced-long-hold**. Your traders keep exactly the same rule as before: only the name changed, and the settings inside the rules are untouched.
+- **Rule files are renamed so the name says how the rule behaves.** Names combine how long a rule holds a stock (short, mid, long) with its style, for example `balanced-long-hold` or `aggressive-mid-hold`. Rules that switch approach with market conditions start with `adaptive`. The rule you knew as robo_trader07 is now **aggressive-mid-hold-quick-profit**, and robo_trader09_balanced is now **balanced-long-hold**. Your traders keep the same rule as before, under a new name.
 
   | Was | Now |
   |---|---|
@@ -29,6 +29,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
   | robo_trader04_leaders | cautious-long-hold-large-companies |
   | (an optimizer scratch file) | concentrated-mid-hold |
 
+- **All 14 rules now take profit intraday.** A take-profit target is triggered as soon as the day's price reaches it, instead of at the close. This was already how the former robo_trader07 worked; the other rules used the close. Results in the simulator for those rules change accordingly, and traders on balanced-long-hold or adaptive-risk-scaled-short-hold-early-profit will see profits taken at the target during the day.
 - **All 14 rules are available to every user** in the simulator and in trader settings. The simulator's default rule is still the former robo_trader07, now **aggressive-mid-hold-quick-profit**. This is a default only. Past simulated results are hypothetical and do not guarantee future results.
 - **Your existing runs and defaults follow the new names.** Old runs show the new rule name, and a default rule you had chosen keeps pointing at the same rule.
 - **The rule list is now the same 14 rules for everyone.** Any other rule was removed, including rules users created themselves. A rule that a trader is still using was not removed.
