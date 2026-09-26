@@ -17,6 +17,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 - **The daily summary email now reports the right trading day.** An email sent before the market opened, or on a weekend, used to summarize the new day before anything had traded, so it showed no buys, no sells and a 0% day. It now summarizes the last completed trading session, with that session's date, buys, sells and day P/L ([#175](https://github.com/guymaim/robo-trader/issues/175)). After the close, the email now arrives at about 16:15 New York time instead of 16:00.
 - **The trader page shows P/L in % on phones.** On narrow screens the Portfolio table only showed P/L in dollars. The percentage now appears under the dollar amount for both unrealized and today's P/L ([#174](https://github.com/guymaim/robo-trader/issues/174)).
+- **Accounts with a non-English name (for example Hebrew) can now start their trader.** A display name written entirely in a non-Latin alphabet used to stop a new trader from starting at all. Your name still appears as you wrote it; the trader now starts normally.
 - **Negative amounts read -$76.72** instead of $-76.72 on the trader, home and run pages.
 - **Run pages fit on a phone screen.** A long run name no longer pushes the whole page sideways, and the trades table scrolls inside its own box ([#162](https://github.com/guymaim/robo-trader/issues/162)).
 - **The "admin only" error page shows clean text** instead of garbled characters ([#161](https://github.com/guymaim/robo-trader/issues/161)).
