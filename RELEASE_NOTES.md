@@ -10,6 +10,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ### Changed
 
+- **The simulator now starts from robo_trader07 by default.** The site-wide default rule file used to be robo_trader09_balanced; it is now robo_trader07, which did better in roughly four out of five historical test periods (2017–2026) and had smaller drawdowns. This is a default only: robo_trader09_balanced is still available in the rule picker, and existing traders keep their current rules. Past simulated results are hypothetical and do not guarantee future results ([#192](https://github.com/guymaim/robo-trader/issues/192)).
 - **Guided Alpaca setup now asks for a rule file.** A new step lets you pick the rules your trader follows, with **robo_trader07** preselected. A new trader is never left without rules: if you skip the choice, it uses robo_trader07. Existing traders keep their current rules ([#164](https://github.com/guymaim/robo-trader/issues/164)).
 - **Guided setup asks whether to allow automatic buy and sell.** On **paper** accounts it is allowed by default, so trades run without asking you first. On **live** (real-money) accounts it still starts off, and every existing live safeguard stays in place. An admin decision for your account still wins ([#165](https://github.com/guymaim/robo-trader/issues/165)).
 
