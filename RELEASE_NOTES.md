@@ -6,6 +6,35 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## Unreleased — Rule files have plain-language names, and everyone gets the same 14
+
+### Changed
+
+- **Rule files are renamed so the name says how the rule behaves.** Names combine how long a rule holds a stock (short, mid, long) with its style, for example `balanced-long-hold` or `aggressive-mid-hold`. Rules that switch approach with market conditions start with `adaptive`. The rule you knew as robo_trader07 is now **aggressive-mid-hold-quick-profit**, and robo_trader09_balanced is now **balanced-long-hold**. Your traders keep exactly the same rule as before: only the name changed, and the settings inside the rules are untouched.
+
+  | Was | Now |
+  |---|---|
+  | robo_trader07 | aggressive-mid-hold-quick-profit |
+  | robo_trader09_balanced | balanced-long-hold |
+  | robo_trader16_t30_voltarget_maxhold20_tp25 | adaptive-risk-scaled-short-hold-early-profit |
+  | robo_trader16_t30_voltarget_maxhold20 | adaptive-risk-scaled-short-hold |
+  | robo_trader16_t30_voltarget | adaptive-risk-scaled-mid-hold |
+  | robo_trader16_bull_trend | aggressive-mid-hold |
+  | robo_trader16_balanced | balanced-mid-hold |
+  | robo_trader06_optimized | balanced-mid-hold-patient-exit |
+  | robo_trader11_ml_adaptive | adaptive-learned-modes |
+  | robo_trader12_tier_adaptive | adaptive-market-modes |
+  | robo_trader15_qqq_ml_floor | adaptive-learned-modes-cash-invested |
+  | robo_trader05_sweep_best | diversified-long-hold |
+  | robo_trader04_leaders | cautious-long-hold-large-companies |
+  | (an optimizer scratch file) | concentrated-mid-hold |
+
+- **All 14 rules are available to every user** in the simulator and in trader settings. The simulator's default rule is still the former robo_trader07, now **aggressive-mid-hold-quick-profit**. This is a default only. Past simulated results are hypothetical and do not guarantee future results.
+- **Your existing runs and defaults follow the new names.** Old runs show the new rule name, and a default rule you had chosen keeps pointing at the same rule.
+- **The rule list is now the same 14 rules for everyone.** Any other rule was removed, including rules users created themselves. A rule that a trader is still using was not removed.
+
+---
+
 ## 2026-09-26 — Guided setup picks a rule file, phone layout, daily summary email and fixes
 
 ### Changed
