@@ -6,6 +6,21 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-27 — Realistic simulations match the live trader more closely
+
+### Fixed
+
+- **Realistic runs no longer make buys a real account never makes.** When a day's buys at the open had no cash, the simulator used to try them again at the next two opens, even after a day that had already bought something and even on days the market filter said not to buy. The live trader does something different: it tries again only when no buy at the open went through, and it buys the same day, once that day's sales free cash. The simulator now does the same. On one account this difference had made the simulation look about 7 percentage points better than the real result. Realistic runs made before today used the old behaviour, so a rerun can show a different result. Idealised runs, and the Compare Rules page, are unchanged.
+- **Accounts that trade whole shares only no longer retry a take-profit sale of less than one share on every check.** If the take-profit sale works out to less than one whole share, nothing is sold, and the next take-profit target is measured from the current price. The simulator's whole-shares option now does the same.
+
+### Added
+
+- **An optional fee per order in the simulator.** A rule file can set a flat fee in dollars on every buy and sale (`execution.order_fee_usd`). Interactive Brokers charges about $1 per order; Alpaca charges none. The default is no fee.
+
+Simulated results are hypothetical and do not guarantee future results.
+
+---
+
 ## 2026-09-27 — Traders only buy from their own rule file's picks
 
 ### Fixed
