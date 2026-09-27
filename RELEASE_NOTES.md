@@ -6,6 +6,20 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-27 — Simulator: realistic trading costs, and clearer results
+
+### Added
+
+- **A "Realistic" execution model in the simulator** ([#191](https://github.com/guymaim/robo-trader/issues/191)). On the new-run page, choose **Execution model: Realistic** to include what a real account pays and does: a 0.08% cost on every buy and every sale, no re-buy of a stock for 3 trading days after selling it, buys that had no cash retried for 2 more days, and an intraday take-profit that sells at the price the trader's regular checks would see (a brief touch of the target can be missed). The default is still **Idealised** (every order fills at the exact price with no costs), so earlier results do not change. Idealised results are usually higher than a real account gets.
+- **The new-run page lets you pick the take-profit trigger** (at the close, or intraday when the price touches the target).
+- **Results now say how orders were filled.** Each result page shows the take-profit trigger and the execution model, with the assumptions in plain words, and a **win rate per position**, where a position's partial take-profit sales and its final sale count as one trade. The existing win rate counts every partial sale as its own win, so it reads higher.
+- **Run history has a "Fills" column** and marks runs of the same rule file as **not comparable** when they used a different take-profit trigger or execution model. Two runs of the same rule can differ a lot for this reason alone.
+- **Optional time stop for rule files** ([#196](https://github.com/guymaim/robo-trader/issues/196)). A rule file can now sell a position that has gone nowhere: after a set number of trading days, it is sold at the close if its gain is still below a threshold. It is off unless a rule file turns it on, and none of the 13 library rules do. Trade lists show these sales as "time stop". Test versions of the Balanced long hold and Aggressive mid hold quick profit rules with a 10-day time stop exist for paper testing; they are not in the rule library yet.
+
+Simulated results are hypothetical and do not guarantee future results.
+
+---
+
 ## 2026-09-27 — Screen-reader labels in Settings
 
 ### Fixed
