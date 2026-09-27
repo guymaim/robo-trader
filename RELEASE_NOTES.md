@@ -6,6 +6,19 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-27 — Compare every library rule, updated nightly
+
+### Added
+
+- **A new "Compare Rules" page** ([#198](https://github.com/guymaim/robo-trader/issues/198)), linked next to Runs. Every rule in the library is simulated over the last 30 days, 3 months, 6 months, 1 year, 1.5 years and 2 years, and ranked by return in each period. Rules with the same result share a rank. The page updates automatically every weeknight after the market closes, and rules added to the library later are included automatically.
+- The figures come from the same simulator as **Run Simulation**, with $10,000 starting capital, all tickers, and the **Idealised** execution model (no trading costs). Real trading costs lower returns, sometimes by a lot over long periods ([#191](https://github.com/guymaim/robo-trader/issues/191)).
+- If a simulation fails, the page shows it as failed. It is never left out or shown as zero. Each result lists the settings it ran with (the rule file's version and take-profit trigger), and a rule is marked **changed** when those differ from the previous night.
+- The page is for information only. It does not change your default rule or any trader.
+
+Simulated results are hypothetical and do not guarantee future results.
+
+---
+
 ## 2026-09-27 — Traders: time stop support, and Robo Trader wording in trader logs
 
 ### Added
