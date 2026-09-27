@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-27 — See when a trader could not be started
+
+### Added
+
+- **Your trader card now tells you when the system could not start your trader.** Before, if something on our side stopped a trader from starting, the card simply never showed it running and you had to ask us. Now the home page card shows **not starting** with a short explanation in plain words, and the same message appears on the trader's panel in Settings. If a settings change could not be applied yet, the card shows **update failed** and your trader keeps running with its previous settings. We keep retrying automatically, and our admins see the same error, so you do not need to do anything. The message disappears as soon as the trader starts.
+
+---
+
 ## 2026-09-27 — Rule files have plain-language names, and everyone gets the same 13
 
 ### Changed
