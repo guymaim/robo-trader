@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-27 — Traders only buy from their own rule file's picks
+
+### Fixed
+
+- **A trader's first buys could follow the wrong rule file** ([#207](https://github.com/guymaim/robo-trader/issues/207)). If you set up a trader and then switched its rule file within the first minutes, its first scan could still run with the old rule file, and the trader bought that file's picks at the next open. Now the old first scan is cancelled and a new one runs with the new rules. The trader also checks which rules produced each list of stocks, and it does not buy from a list made with different rules. It waits for the next scan instead.
+
+---
+
 ## 2026-09-27 — Compare every library rule, updated nightly
 
 ### Added
