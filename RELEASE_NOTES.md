@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-27 — Rule names show their rank
+
+### Changed
+
+- **Each rule's name now starts with its rank number**, for example **04. Balanced long hold** instead of just "Balanced long hold". The number (1 to 13) is the rule's place in our fixed historical test, which already set the order of the list; now you can see it in the name too, in the simulator, in trader settings and everywhere else a rule name appears. The rules themselves and your traders' settings are unchanged. Past results are not a promise of future returns. ([#199](https://github.com/guymaim/robo-trader/issues/199))
+
+---
+
 ## 2026-09-27 — See when a trader could not be started
 
 ### Added
