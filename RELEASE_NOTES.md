@@ -6,7 +6,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
-## 2026-09-28 — Compare Rules updates as each result finishes
+## 2026-09-28 — Compare Rules: realistic costs, live updates, sorting and column choice
 
 ### Changed
 
@@ -14,6 +14,9 @@ For how we maintain this file, see the project’s internal contributor rules (`
 - **Results come in about twice as fast,** because two simulations now run at the same time.
 - **Interruptions no longer lose work.** If a comparison is interrupted, it continues where it stopped instead of starting over. A new comparison starts once per trading day.
 - A result that failed in the new comparison is shown as failed. The page never shows an older number in its place.
+- **Trading costs are now included.** Every simulation on the page uses the **Realistic** execution model from Run Simulation: an estimated 0.08% slippage on each buy and sale, the live trader's wait before buying a stock again, its retry of buys that had no cash, and take-profit sales at the next price check instead of exactly at the target. Returns are therefore lower than before, and earlier (no-cost) results are not mixed in. These are still estimates, not live results.
+- **Sort by any column.** Select any column heading to sort the table by it, and select it again to reverse the order.
+- **Choose your columns.** Hide the columns you don't need (for example max drawdown, trades or profit factor). They are hidden in every period at once, and your choice is remembered in your browser.
 
 Simulated results are hypothetical and do not guarantee future results.
 
