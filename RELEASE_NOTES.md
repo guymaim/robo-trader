@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-27 — Traders: time stop support, and Robo Trader wording in trader logs
+
+### Added
+
+- **The live traders can now apply the optional time stop** ([#196](https://github.com/guymaim/robo-trader/issues/196)), using the same calculation as the simulator: once a position has been held the set number of trading days, it is sold near the close if its gain is still below the threshold. It is off unless a trader's rule file turns it on, and none of the 13 library rules do, so no existing trader changes behaviour.
+
+### Fixed
+
+- **Trader logs and messages say Robo Trader** ([#115](https://github.com/guymaim/robo-trader/issues/115)). The startup message about who runs the daily scan, the trader help text and the missing-keys error no longer use the old internal name. Older setting names keep working.
+
+---
+
 ## 2026-09-27 — Simulator: realistic trading costs, and clearer results
 
 ### Added
