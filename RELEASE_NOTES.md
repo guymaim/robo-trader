@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-27 — Screen-reader labels in Settings
+
+### Fixed
+
+- **Every field in Settings now has a name that screen readers read out**, including the Interactive Brokers authenticator setup key and its passphrase, which previously only had grey hint text. We also added a check that keeps every form field on the site labelled. The accessibility statement is unchanged for now; an updated version is being reviewed. ([#116](https://github.com/guymaim/robo-trader/issues/116))
+
+---
+
 ## 2026-09-27 — Rule names show their rank
 
 ### Changed
