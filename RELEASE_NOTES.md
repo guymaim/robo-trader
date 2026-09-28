@@ -6,6 +6,34 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-28 — My Rules: make, change and compare your own rule files
+
+### Added
+
+- **My Rules page.** A new **My Rules** link in the menu lists your own rule files next to the library rules. For each rule you can turn it on or off, change it, make a copy, read its explanation, run a simulation, download it, rename it or delete it.
+- **Rule editor.** Choose **New rule** and start from an existing rule (a library rule or one of your own), from scratch, or from a JSON file you upload. Then edit in one of two ways, and switch between them at any time without losing anything:
+  - **Guided steps** show one group of settings at a time (for example Trend, Pullback, 52-week position, AVWAP, Entry), in four parts: what to buy, when to buy, how much, and when to sell.
+  - **Full editor** shows every setting on one page, and has a **JSON** tab with the same rule as text.
+- **An explanation for every setting.** Select the **?** next to a setting to read what it does, the value the rule started with, and the values that are allowed.
+- **Review before you save.** The last step shows what the rule does, lists every value you changed, and points out things worth a second look, such as a rule with no stop or a very large position size. A rule with a value outside the allowed range cannot be saved.
+- **Compare now.** Runs your rule in the same six periods as the Compare Rules page (1, 3, 6, 12, 18 and 24 months). It takes about 40 minutes; results appear one by one.
+- **Your rules on the Compare Rules page.** Every rule of yours that is turned on is listed on the Compare Rules page, marked **Yours**, and ranked together with the library rules. Only you see your rules. They are refreshed after each trading day; until a new result is ready the earlier one is shown, marked ⟳ with its date. **Show the library only** gives the ranking without your rules.
+
+### How it works
+
+- **You can save as many rules as you like (up to 100) and have 3 turned on at a time.** Only a rule that is turned on can be picked for a simulation or a trader, and only those are compared. If you need more than 3, ask us.
+- **A rule that a trader is using is locked.** It cannot be changed, turned off or deleted while a trader uses it or while it is your default rule. To change it, make a copy, change the copy, and pick the copy in the trader's settings. The trader then starts a fresh scan with the new rule.
+- **Using your own rule with real money needs two extra steps.** The rule's comparison must be finished for the rule as it is now, and you type LIVE after seeing its results. Paper traders can use any rule of yours that is turned on.
+- **New Run keeps working as before.** When you run a simulation with edited criteria, the rule is kept in My Rules, turned off. Running the same edit again uses the same rule, so your list does not fill up with copies.
+- **Simulated results are hypothetical.** Past simulated results do not predict future results. A rule that is changed again and again until it looks best on past periods often does worse afterwards.
+
+### Fixed
+
+- **Explain rule now works for your own rule files.** It used to answer "Unknown rules file" for a rule you had saved or uploaded.
+- **The Compare Rules page no longer slides sideways** while results are still being computed.
+
+---
+
 ## 2026-09-28 — Simulations include trading costs by default
 
 ### Changed
