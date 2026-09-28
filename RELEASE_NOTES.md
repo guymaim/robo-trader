@@ -6,6 +6,12 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-28 — Simulation Runs shows your own runs
+
+### Fixed
+
+- **The Simulation Runs page now lists only your own runs** ([#213](https://github.com/guymaim/robo-trader/issues/213)). Admin and support accounts used to see every user's runs mixed in with their own, with no way to tell whose was whose. Everyone now sees their own runs by default. Admin and support accounts can switch to **All users' runs**, which adds an **Owner** column (support accounts see the email partly hidden, for example `m***@example.com`; runs with no recorded owner show "unknown").
+
 ## 2026-09-28 — Clearer period names on the rules comparison page
 
 ### Changed
