@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-28 — Support staff no longer see your email address in trader log links
+
+### Fixed
+
+- **Your email address is better protected from our read-only support role.** Since [#187](https://github.com/guymaim/robo-trader/issues/187), support staff with read-only access see email addresses shortened (for example `g***@gmail.com`). The trader log list and log pages still showed each user's full address in the log names, page titles and links. They now show the shortened address, and links to a trader's log no longer contain any part of your email address. The same applies to the read-only view of your trader. ([#212](https://github.com/guymaim/robo-trader/issues/212))
+
+---
+
 ## 2026-09-28 — Compare Rules: realistic costs, live updates, sorting and column choice
 
 ### Changed
