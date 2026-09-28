@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-28 — Changing a trader's rule file takes effect at the next open
+
+### Fixed
+
+- **A new rule file now picks the next buys right away.** When you changed a trader's rule file after that day's scan had already run, the trader kept the old rule file's candidate list. It correctly refused to buy from it, but it then bought nothing until the next evening's scan, so the new rules only started buying a trading day later. Now, when the rule file changes, the old list is deleted and a new scan with the new rules runs right away, so the next open buys from the new rules' list ([#217](https://github.com/guymaim/robo-trader/issues/217)).
+
+---
+
 ## 2026-09-28 — Admin pages fit on phones
 
 ### Fixed
