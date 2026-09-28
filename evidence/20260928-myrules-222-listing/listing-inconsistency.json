@@ -1,0 +1,39 @@
+{
+ "new_save": [
+  {
+   "name": "qa_mr_new_save",
+   "s": 200,
+   "body": "{\"ok\":true,\"path\":\"qa_mr_new_save-e2b6.json\",\"id\":\"qa_mr_new_save-e2b6\",\"enabled\":false,\"rule_id\":\"uuid-****ae30\",\"note\":\"Saved to My rules as 'qa_mr_new_save', turned off: You can have 3 rules turned on. Turn one off first, or ask an administrator to raise your limit.\"}",
+   "msg": "Saved to My rules as 'qa_mr_new_save', turned off: You can have 3 rules turned on. Turn one off first, or ask an administrator to raise your limit."
+  },
+  {
+   "name": "<i>qa_mr_new_adj</i>",
+   "s": 400,
+   "body": "{\"ok\":false,\"code\":\"invalid_name\",\"error\":\"The name cannot contain < or > or control characters.\"}",
+   "msg": "Not saved: The name cannot contain < or > or control characters."
+  }
+ ],
+ "myrules_names": [
+  "qa_pm_20260928_a",
+  "qa_pm_20260928_e",
+  "qa_pm_20260928_d",
+  "img_src_x_onerror_alert_1"
+ ],
+ "new_dropdown_own": [
+  "qqq-above-ma20-trailing-10-tp-30-hold-60d-img-src-x-onerror-alert-1",
+  "qa_pm_20260928_a",
+  "qqq-above-ma20-trailing-10-tp-30-hold-60d-qa-pm-20260928-d",
+  "qqq-above-ma20-trailing-10-tp-30-hold-60d-qa-pm-20260928-e"
+ ],
+ "settings_dropdown_own": [
+  "qqq-above-ma20-trailing-10-tp-30-hold-60d-img-src-x-onerror-alert-1",
+  "qqq-above-ma20-trailing-10-tp-30-hold-60d-qa-pm-20260928-a",
+  "qqq-above-ma20-trailing-10-tp-30-hold-60d-qa-pm-20260928-d",
+  "qqq-above-ma20-trailing-10-tp-30-hold-60d-qa-pm-20260928-e"
+ ],
+ "run_sim_links": [
+  "/new?rules=qa_pm_20260928_a.json",
+  "/new?rules=qa_pm_20260928_e.json",
+  "/new?rules=qa_pm_20260928_d.json"
+ ]
+}
