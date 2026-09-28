@@ -6,7 +6,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
-## 2026-10-03 — Email when your broker needs you to act
+## 2026-09-28 — Email when your broker needs you to act
 
 ### Added
 
