@@ -6,6 +6,19 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-28 — Your own rules have one name everywhere; broker emails reach everyone
+
+### Fixed
+
+- **Your own rule files now show the same name on every page.** In New Run and in the rule lists in Settings, a rule you saved could show up under a long generated name (for example `qqq-above-ma20-trailing-10-tp-30-hold-60d-my-rule`) while My Rules showed the name you typed. Every page now shows the name you typed. A rule saved before My Rules existed shows its file name. ([#222](https://github.com/guymaim/robo-trader/issues/222))
+- **The "your broker needs you to act" email now reaches you even if you turned alert emails off.** It is about your account, not a trading alert, so it no longer depends on that setting. Other alert and summary emails still follow your setting.
+
+### Changed
+
+- **Saving broker logins is better protected.** When you save broker credentials in Settings, the key your browser makes is now sealed before it leaves your browser, so nothing between you and the app ever holds your encrypted login and its key together. Logins you saved before keep working; nothing to do.
+
+---
+
 ## 2026-09-28 — Equity chart starts where your account started
 
 ### Fixed
