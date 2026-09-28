@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-28 — Admin pages fit on phones
+
+### Fixed
+
+- **The admin pages no longer slide sideways on a phone.** Wide tables on the admin pages now scroll inside their own box, and the rest of the page stays in place ([#189](https://github.com/guymaim/robo-trader/issues/189)).
+
+---
+
 ## 2026-09-28 — Support staff no longer see your email address in trader log links
 
 ### Fixed
