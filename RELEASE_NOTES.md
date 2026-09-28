@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-28 — Clearer period names on the rules comparison page
+
+### Changed
+
+- **The rules comparison page names its periods by length.** The columns now read 1 month, 3 months, 6 months, 12 months, 18 months and 24 months, instead of names like "Last year" and "Last 1.5 years".
+
+---
+
 ## 2026-09-28 — Changing a trader's rule file takes effect at the next open
 
 ### Fixed
