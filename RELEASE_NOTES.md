@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-03 — Email when your broker needs you to act
+
+### Added
+
+- **An email when your broker blocks your trader's orders for a reason only you can fix.** For example, Interactive Brokers sometimes asks you to confirm your account with a code they emailed you before they accept orders. Your trader now sends you one email that explains what happened, lists the orders that were not placed, and gives the steps to fix it, with a button to your trader's page. You get at most one such email per problem per day, even if many orders are blocked. It covers Interactive Brokers account verification, missing trading permissions, account restrictions and missing market data subscriptions, and Alpaca accounts that are blocked from trading.
+
+### Fixed
+
+- **An Interactive Brokers trader now tries again the same day after rejected orders.** Before, orders that Interactive Brokers rejected were still counted as using your cash, so the trader bought nothing more that day even after you fixed the problem. Now it retries on its next check.
+
+---
+
 ## 2026-09-28 — My Rules: make, change and compare your own rule files
 
 ### Added
