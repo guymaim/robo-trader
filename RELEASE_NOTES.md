@@ -6,6 +6,15 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-28 — Equity chart starts where your account started
+
+### Fixed
+
+- **The equity chart on your trader's page now starts at the amount you started with.** For a new account, the chart used to start at the first day's closing value, so a gain or loss on the first day was missing from the chart and from the QQQ and SPY lines next to it. For example, an account that started with $10,000 and closed its first day at $10,412 showed a chart starting at $10,412, which made the account look like it was losing money when it was actually up. The chart and the QQQ and SPY lines now start at $10,000. Your Total return and other numbers were already right and do not change.
+- **No more weekend points on the equity chart.** The chart showed Saturday and Sunday as extra days, and sometimes a move on Sunday evening even though the market was closed. Weekends are now left out. A weekend day when you added or withdrew money is still shown.
+
+---
+
 ## 2026-09-28 — Email when your broker needs you to act
 
 ### Added
