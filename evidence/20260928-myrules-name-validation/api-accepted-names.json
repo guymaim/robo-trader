@@ -1,0 +1,46 @@
+{
+ "probe": "POST /api/rules with names containing U+202E / U+200B / U+2060 / U+2800 / U+3164 and a duplicate name; all accepted (200). A name of only U+200B U+200B was rejected. All deleted afterwards.",
+ "cards_listed_on_/rules": [
+  {
+   "id": "uuid-****5839",
+   "name": "qa_\u2800\u3164blank",
+   "cps": [
+    "U+2800",
+    "U+3164"
+   ]
+  },
+  {
+   "id": "uuid-****4d0b",
+   "name": "qa_same_name",
+   "cps": []
+  },
+  {
+   "id": "uuid-****ef5f",
+   "name": "qa_same_name",
+   "cps": []
+  },
+  {
+   "id": "uuid-****e3ec",
+   "name": "qa_zw\u200bsp\u2060ace",
+   "cps": [
+    "U+200B",
+    "U+2060"
+   ]
+  },
+  {
+   "id": "uuid-****ee71",
+   "name": "qa_bidi_\u202efdp.exe",
+   "cps": [
+    "U+202E"
+   ]
+  }
+ ],
+ "delete_status": [
+  200,
+  200,
+  200,
+  200,
+  200
+ ],
+ "remaining_after_cleanup": 0
+}
