@@ -31,6 +31,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 - **Explain rule now works for your own rule files.** It used to answer "Unknown rules file" for a rule you had saved or uploaded.
 - **The Compare Rules page no longer slides sideways** while results are still being computed.
+- **Rule names are checked more carefully** ([#223](https://github.com/guymaim/robo-trader/issues/223)). A name can no longer contain hidden characters, such as text-direction marks or zero-width spaces, that could make it look like a different name. Each of your rules now needs its own name (upper and lower case count as the same); if you pick a name you already use, you are asked to choose another. Copies get a number, for example "my rule copy (2)". Names in any language still work. Rules you saved earlier keep their names; hidden characters are left out when they are shown, and two rules with the same name are shown as "name" and "name (2)".
 
 ---
 
