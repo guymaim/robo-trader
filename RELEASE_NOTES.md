@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-28 — Simulations include trading costs by default
+
+### Changed
+
+- **New simulations now use the Realistic execution model by default** ([#191](https://github.com/guymaim/robo-trader/issues/191)). A new run includes a trading cost on every buy and sale and follows the live trader's timing: no re-buy of a stock for a few days after selling it, buys that had no cash tried again later that day, and take-profit sales at the price the trader's regular checks would see. Results will usually be lower than before and closer to what a real account gets. You can still choose **Idealised** (exact fills, no costs) on the New Run page. A rule file with its own execution settings keeps them. Runs you made earlier are unchanged and still show which model they used; compare runs only when the model matches.
+
+---
+
 ## 2026-09-28 — Simulation Runs shows your own runs
 
 ### Fixed
