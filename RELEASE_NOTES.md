@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-29 — "Money you put in" no longer counts a new account's starting money twice
+
+### Fixed
+
+- **A new Alpaca account could show double the money you put in.** On your trader's page, an account that started with $10,000 could show **Money you put in** as $20,000 and a **Profit** of about -$10,000, although nothing was lost. The starting money was counted once as your starting capital and again as a deposit. It is now counted once. Accounts that showed the wrong numbers corrected themselves; nothing to do. Your trades and your account at the broker were never affected; only the numbers on the page were wrong.
+
+---
+
 ## 2026-09-29 — Compare Rules keeps every day's results
 
 ### Added
