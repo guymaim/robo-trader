@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-29 — Check your IBKR authenticator key before you rely on it
+
+### Added
+
+- **Test key button for automatic IBKR sign-in.** In **Settings**, on your IBKR Live trader, next to **Save key**, there is now a **Test key** button. It shows the 6-digit code your authenticator setup key makes right now and how many seconds it stays valid. Compare it with the code in your authenticator app: if they match, the key is right; if not, paste the key again. To test a key you already saved, leave the box empty and enter your vault passphrase. The code is worked out in your browser only; your key is not saved or sent anywhere by this button.
+
+---
+
 ## 2026-09-29 — Compare Rules: earlier days are being added
 
 ### Added
