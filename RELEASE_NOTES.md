@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-29 — Compare Rules: earlier days are being added
+
+### Added
+
+- **Compare Rules history now reaches back to early September.** The **Comparison day** menu on the Compare Rules page is getting three earlier days: 18, 11 and 4 September 2026, one week apart. They are computed in the background when no other comparison is running, so they appear one at a time over the next few days, newest first. Each one shows the table as it would have looked on that day, with all six periods ending on that day. The **Latest** results are not affected while this runs.
+
+---
+
 ## 2026-09-29 — "Money you put in" no longer counts a new account's starting money twice
 
 ### Fixed
