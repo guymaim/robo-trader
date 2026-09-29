@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-29 — Compare Rules keeps every day's results
+
+### Added
+
+- **See how the rules ranked on earlier days.** The Compare Rules page now keeps each trading day's comparison. A **Comparison day** menu at the top lists every saved day, newest first; **Latest** is the default. Pick a day and select **Show** to see that day's table as it was: ranks, returns, drawdown, trades, win rate and all six periods. A note says which day you are viewing, with a link back to the latest results. Sorting and the "library only" view keep the day you chose. Your own rules appear on a past day only if they were compared that day, and only you see them. Results for your own rules are kept for about the last week of trading days, so older days show the library rules only. History starts with 25 September 2026. ([#239](https://github.com/guymaim/robo-trader/issues/239))
+
+---
+
 ## 2026-09-28 — Your own rules have one name everywhere; broker emails reach everyone
 
 ### Fixed
