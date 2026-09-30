@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-30 — Alpaca paper traders can run in a new shared engine
+
+### Changed
+
+- **Some Alpaca paper traders now run in a new shared trading engine.** We are moving Alpaca paper traders, one at a time, from a separate engine per trader to one shared engine that runs many traders side by side. It uses less computing power per trader and lets us add traders faster. Your trader keeps the same rules, positions, history, settings and account, and it trades the same way. The trader page, logs, **Sell now**, approvals and alerts look and work the same. **Nothing to do.** A move usually happens while the market is closed and takes a few minutes; during those minutes, changes to that trader (for example approving a buy or **Sell now**) are refused with a short "being moved, try again in a few minutes" message. IBKR traders and live Alpaca accounts are not affected.
+
+---
+
 ## 2026-09-29 — Check your IBKR authenticator key before you rely on it
 
 ### Added
