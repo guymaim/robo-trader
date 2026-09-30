@@ -6,6 +6,17 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-30 — "Today return" and the equity chart agree
+
+### Fixed
+
+- **On Alpaca accounts, each day's point on the equity chart now uses the 4 pm close.** The chart on your trader's page stored each day's value using after-hours prices, so a day's step on the chart could differ from **Today return**. Each day's point is now the regular-session close.
+- **"Today return" could be too high when you still held a stock your broker had delisted** (for example after a takeover). The broker's previous-close figure left that stock out, while your current value included it. **Today return** now measures from the same closing value the chart shows, and the daily loss limit uses the same starting value.
+
+Chart points recorded before this change are left as they were. The difference is small and does not change your total return. Nothing to do.
+
+---
+
 ## 2026-09-30 — Alpaca paper traders can run in a new shared engine
 
 ### Changed
