@@ -6,6 +6,19 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-09-30 — IBKR traders: back online faster, exits no longer stuck, paper market data tip
+
+### Fixed
+
+- **After an IB Gateway restart, IBKR traders show as online again within about a minute.** Before, the trader page could show **offline** for up to 15 minutes after the gateway restarted, even though the gateway was already signed in again. Trading itself was not affected.
+- **An IBKR position could stop being managed after a sale or trim that failed during a connection drop.** If the gateway was down at the moment a trim or sale was sent, the trader marked that stock as "waiting for confirmation" and then skipped all later exit checks for it, including the trailing stop. That mark now clears on the next trading day if the broker shows the order never went through, as it already did on Alpaca. One paper account was affected; no live account was.
+
+### Added
+
+- **IBKR paper guide: market data sharing when you also run IBKR Live.** If you run both an IBKR Paper and an IBKR Live trader, open IBKR Client Portal → **Settings** → **Paper Trading Account** and set **Share real-time market data subscriptions with paper trading account** to **No**. With sharing on, IBKR gives your market data only to the live session, so the paper trader shows **Market data locked (10197)** and cannot price buys or check exits. The [IBKR paper setup](https://robo-trader.egedsoft.co.il/help/ibkr-paper) guide and the message on the trader page now explain this. Paper only? Either setting works.
+
+---
+
 ## 2026-09-30 — "Today return" and the equity chart agree
 
 ### Fixed
