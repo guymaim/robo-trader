@@ -6,6 +6,24 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-01 — New Alpaca keys are used right away; Restart shows how it went
+
+### Fixed
+
+- **Saving new Alpaca API keys now restarts that trader by itself.** Before, a running trader kept the keys it had started with. If you regenerated your keys at Alpaca and saved the new ones in Settings, the trader kept failing with "unauthorized" until you pressed **Restart trader** ([#262](https://github.com/guymaim/robo-trader/issues/262)). Now the save restarts the trader once, and the new keys are used within about a minute.
+- **A trader whose keys were rejected by Alpaca now tries the saved keys again by itself.** It no longer keeps retrying with the old keys.
+- **Disable and then Enable now restarts the trader even when done within a few seconds.** Before, a quick off-and-on could leave the trader running as it was, while Settings showed it as stopped.
+
+### Added
+
+- **Restart trader now tells you what is happening.** After you press **Restart trader** in Settings (or save new Alpaca keys), the card shows **Restarting…** with the time waited, and then the result:
+  - **Restarted. The trader is running and connected to the broker.**
+  - or the reason it could not start, in plain words. For example: the broker rejected the saved keys, or the keys belong to a different broker account than the one this trader was linked to.
+
+  It usually takes less than two minutes. You can stay on the page; it updates by itself.
+
+---
+
 ## 2026-10-01 — Rules Comparison: all saved days together
 
 ### Added
