@@ -14,6 +14,8 @@ For how we maintain this file, see the project’s internal contributor rules (`
 - **A trader whose keys were rejected by Alpaca now tries the saved keys again by itself.** It no longer keeps retrying with the old keys.
 - **Disable and then Enable now restarts the trader even when done within a few seconds.** Before, a quick off-and-on could leave the trader running as it was, while Settings showed it as stopped.
 
+- **The trader page shows the right rule file for a trader that has run a long time without a restart.** After more than about a day without a restart, the page could show the default rule (and its hold days and entry size) instead of the rule you chose. Only the page was wrong: the trader kept trading with the rule you chose.
+
 ### Added
 
 - **Restart trader now tells you what is happening.** After you press **Restart trader** in Settings (or save new Alpaca keys), the card shows **Restarting…** with the time waited, and then the result:
