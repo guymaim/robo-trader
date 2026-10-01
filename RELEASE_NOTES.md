@@ -6,6 +6,21 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-01 — Rules Comparison: all saved days together
+
+### Added
+
+- **The Rules Comparison page now sums up every saved day in one place.** Until now the page showed one trading day at a time. A new section, **All saved days together**, below the day's table, shows how each library rule did across every saved comparison day:
+  - **Short lists:** rules that never lost money in any period, rules that never ranked below 8, rules that were always ahead of QQQ, the rule with the best average rank, the rule most often first and most often in the top 3, and the rule with the smallest worst fall. When no rule qualifies, the page names the closest one and how often it met the test.
+  - **One line per rule:** average rank, worst rank, times first, times in the top 3, results with a profit, worst single result, results ahead of QQQ, worst fall from a peak, average win rate, average profit factor and trades a year.
+  - **By period:** each rule's average rank and average return in each of the six periods (1 month to 24 months), so you can see which rules lead the short periods and which lead the long ones.
+
+  It updates by itself when each day's comparison finishes. Select a column heading to sort by it. Your own rules are not counted in this section.
+
+  **Read it with care.** The saved days are close together, so their periods cover almost the same dates; this is not many separate tests. These are simulated results. They do not predict what a trader will earn, and nothing on this page changes your trader or your default rule.
+
+---
+
 ## 2026-09-30 — IBKR traders: back online faster, exits no longer stuck, paper market data tip
 
 ### Fixed
