@@ -6,6 +6,22 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-02 — Interactive Brokers: deposits in another currency are counted
+
+### Fixed
+
+- **A deposit made in a currency other than US dollars is now counted as money you put in.** Before, if you deposited shekels (or another currency) into your Interactive Brokers account and converted them to dollars, the trader page did not add the deposit to **Money you put in**. It showed the new money as profit, so **Profit**, **Total return** and **Today** were too high. Now the deposit is recorded:
+  - when the money arrives, if the trader sees it before you convert it, or
+  - when you convert it, if you convert it first.
+
+  The deposit shows on the page within about half an hour when the market is closed, and within about ten minutes when it is open. You get the usual "Recorded a deposit" notice. A withdrawal in another currency is recorded the same way.
+- **Money in another currency is never treated as dollars you can trade with.** Until you convert it, a deposit in another currency is not used for buying. Before this fix, the trader could read it as available dollars for a short time after it arrived.
+- **A deposit is no longer missed when the trader restarts right after the money arrives.**
+
+If you made such a deposit before this update, it is not added by itself. Ask the site admin to record it.
+
+---
+
 ## 2026-10-01 — New Alpaca keys are used right away; Restart shows how it went
 
 ### Fixed
