@@ -17,6 +17,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
   The deposit shows on the page within about half an hour when the market is closed, and within about ten minutes when it is open. You get the usual "Recorded a deposit" notice. A withdrawal in another currency is recorded the same way.
 - **Money in another currency is never treated as dollars you can trade with.** Until you convert it, a deposit in another currency is not used for buying. Before this fix, the trader could read it as available dollars for a short time after it arrived.
 - **A deposit is no longer missed when the trader restarts right after the money arrives.**
+- **Alpha total (vs QQQ and vs SPY) is right on the day of a deposit.** On the day a deposit was recorded, **Alpha total** could count the deposit as return until the market opened, while **Total return** next to it was already right. Both now leave the deposit out.
 
 If you made such a deposit before this update, it is not added by itself. Ask the site admin to record it.
 
