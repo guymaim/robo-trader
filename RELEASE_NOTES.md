@@ -6,6 +6,20 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-02 — Ten new rules in the rules library (14 to 23)
+
+### Added
+
+- **The rules library has ten new rules, numbered 14 to 23.** Each one is a changed version of one of the rules 01 to 13, and its name says which: for example **18. Balanced long hold time stop** is based on **04. Balanced long hold**. The rules 01 to 13 have not changed.
+- **Eight of them use a time stop.** A time stop sells a position that has not gained enough after a set number of trading days. The two rules whose names end in "retuned" (14 and 23) have no time stop; they change other settings. Every new rule also changes some of these: the stop-loss distance, the trailing stop, take-profit, how long a position can be held, how many buys a day, and how big each buy is. Some also change which stocks qualify.
+- **The numbers 14 to 23 are only the order they were added, not a rank.** The numbers 01 to 13 still show the order of an earlier test.
+- **You can pick them like any other rule:** in New Run, in a trader's settings, and as the start of your own rule in My Rules.
+- **The Rules Comparison page includes them.** They also appear on each earlier saved day: these results are worked out in the background over the next day or two, one day at a time. Until a day is finished it shows the rules it had before.
+
+These rules were found by testing many settings on past prices. Past results do not predict future results: a rule tuned on past data often does worse on new data. Try a new rule in a paper account before you use it with real money.
+
+---
+
 ## 2026-10-02 — Rules Comparison: choose which saved days are counted
 
 ### Added
