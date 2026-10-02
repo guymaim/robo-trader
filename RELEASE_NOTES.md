@@ -6,6 +6,24 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-02 — Rules Comparison: choose which saved days are counted
+
+### Added
+
+- **"All saved days together" on the Rules Comparison page now has a "Days counted" choice.** You can count:
+  - all saved days (as before),
+  - the last saved days (you enter how many),
+  - this month, last month, the last 90 days, or this year,
+  - the first saved day of each week in the last 12 months,
+  - the first saved day of each month in the last 2 years,
+  - dates you choose (from and to).
+
+  After you press **Apply**, every number in that section is worked out again from those days only: the short lists (never lost money, most often first, and so on), the table of each rule, and the table by period. The section says which days were counted and lists them. The choice stays when you sort the table or pick another comparison day. **Count all saved days** goes back to everything.
+
+  The table for the day shown at the top of the page does not change. These are simulated results and they do not predict what a trader will earn.
+
+---
+
 ## 2026-10-02 — Interactive Brokers: deposits in another currency are counted
 
 ### Fixed
