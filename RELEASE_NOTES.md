@@ -14,6 +14,21 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-04 — Settings checkboxes are clearer for screen readers; admin tables are easier to read
+
+### Fixed
+
+- **The checkboxes under a trader's Options in Settings now announce what they do.** A screen reader reads "Require approval before buying" or "Require approval before selling" instead of a bare "on".
+- **Alpaca traders no longer offer the Interactive Brokers restart option.** It does not apply to them, so keyboard and screen-reader users no longer land on it.
+- **For administrators: "Days running" is now the same on every page.** The admin table showed one day less than the trader's own page; the go-live day now counts as day 1 everywhere.
+
+### Added
+
+- **For administrators: the user tables show a short user reference next to the email,** so rows of the same person or similar emails can be told apart. Emails stay partly hidden for read-only admins.
+- **For administrators: a new "Last scan" column** shows the date of each trader's latest stock scan, with a "stale" mark when a trading day was missed.
+
+---
+
 ## 2026-10-02 — Ten new rules in the rules library (14 to 23)
 
 ### Added
