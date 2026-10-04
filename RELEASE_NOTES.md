@@ -6,6 +6,25 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-04 — Clearer Home cards, Israel time, and plain "Sell now" confirmations
+
+### Added
+
+- **Home shows how each trader is doing without opening it.** Each card has a Paper or Live label, a Connected or Not connected label, and the date of its last scan ("No scan yet" for a new one). If the trader hit a broker rejection or a startup problem in the last three days, the card says so in one plain sentence with a link to that trader's log. ([#252](https://github.com/guymaim/robo-trader/issues/252))
+- **A new account sees what to do next.** Before a broker is connected, Home shows one "Connect a broker" panel instead of empty figures. An empty Runs page says "No simulations yet" and links to New Run. The getting-started checklist disappears once all four steps are done. Skipping the two-step sign-in step is remembered in that browser only. ([#258](https://github.com/guymaim/robo-trader/issues/258))
+- **Times show Israel time with UTC beside it,** for example "29 Sep 2026, 16:36 Israel time (13:36 UTC)". This applies to the runs list, a run's page, trader orders and activity, and the Rules Comparison page. The clock in the page header and the time in the Sell now box are unchanged. ([#256](https://github.com/guymaim/robo-trader/issues/256))
+- **Simulations say where they are.** The runs list shows queued, running, done or failed, and "running for 12m 5s" on a run in progress. A queued run's page tells you that you can leave and come back. ([#259](https://github.com/guymaim/robo-trader/issues/259))
+
+### Changed
+
+- **"Sell now" and "Decide" say exactly what will happen.** The box names Paper or Live, the stock, the number of shares, and that it is a market order that cannot be taken back. The final button reads like "Sell 10 AAPL". On a live account the cursor starts on Cancel. Your authenticator code is still asked, as before. ([#257](https://github.com/guymaim/robo-trader/issues/257))
+
+### Fixed
+
+- **Accessibility:** the "Extra days" box in the max-hold dialog now has a name for screen readers, and the small switches and checkboxes on the rules pages are big enough to tap (at least 24 by 24 pixels). Our accessibility work is not finished; see [#116](https://github.com/guymaim/robo-trader/issues/116).
+
+---
+
 ## 2026-10-04 — Trader page names how your trader runs correctly
 
 ### Fixed
