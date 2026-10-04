@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-04 — Trader page names how your trader runs correctly
+
+### Fixed
+
+- **The trader page said "Pod" for every trader, even when yours runs in the shared trading group.** The label now says **Pool** for those traders, and the buy-approval chip says "(pool)" instead of "(pod)". Only the wording changed. Your trader, its rules and its broker connection are the same as before. ([#268](https://github.com/guymaim/robo-trader/issues/268))
+
+---
+
 ## 2026-10-02 — Ten new rules in the rules library (14 to 23)
 
 ### Added
