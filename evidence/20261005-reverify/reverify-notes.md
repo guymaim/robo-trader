@@ -7,7 +7,7 @@ changed, nothing clicked on Alpaca, no sign-in, no credential entered.
 The only clicks on the product were the **Options** disclosure toggle on the
 Alpaca trader 1 card (expand only) and page navigation.
 
-Scope: the 14 issues closed since the previous re-verify finished
+Scope: the 14 issues closed since the previous re-verify finished (2026-10-04T13:05:32Z) and not carrying `verified-by-claude`. Six verified fixed and labelled; three commented and left closed as not re-testable; five feature ideas out of scope. One issue (#273) was reopened in error at 08:07Z and re-closed at 08:11Z — see below.
 (2026-10-04T13:05:32Z) and not carrying `verified-by-claude`.
 
 ## Verified fixed — label applied
@@ -65,32 +65,55 @@ distinct: two different users share the masked string `g***@egedsoft.co.il` and
 both hold an `alpaca #2` trader, and they now read `(9acb344b)` and `(3bb2da95)`.
 `/api/admin/traders` returns a `user_ref` field alongside `user_id`.
 
-## Reopened
+## Verified fixed — label applied (continued)
 
-### #273 Hidden IBKR restart checkbox still in the accessibility tree
-Measured on a fresh `/settings` load at 08:04:20Z. One thing changed and one
-did not.
+### #273 Hidden IBKR restart checkbox on Alpaca cards
+**Corrected.** This run first reopened #273 at 08:07Z and re-closed it at 08:11Z.
+The reopen was wrong; the fix is sound.
 
-Changed: the control is now `disabled` on the three Alpaca cards (and still
-enabled on the two IBKR cards, correctly) — so it has left the tab order.
+The faulty reading: `getComputedStyle()` on the wrapping `<label>` reported
+`display: flex` / `visibility: visible` and the rect was 0x0 — which was taken as
+"still hidden by zero-sizing". But an element inside a `display:none` ancestor
+reports exactly that from the inside. The original report measures the same way
+and has the same blind spot.
 
-Unchanged: it is still rendered, and still hidden only by zero-sizing —
-the same technique the issue identified as insufficient.
+Re-measured at 08:09:19Z with the Alpaca trader 1 Options panel expanded,
+walking the whole ancestor chain:
 
-| card | labelSize | display | visibility | opacity | aria-hidden | hidden attr | inert | disabled |
-|---|---|---|---|---|---|---|---|---|
-| IBKR Live       | 0x0 | flex | visible | 1 | no | no | no | **false** |
-| IBKR Paper      | 0x0 | flex | visible | 1 | no | no | no | **false** |
-| Alpaca trader 1 | 0x0 | flex | visible | 1 | no | no | no | **true** |
-| Alpaca trader 2 | 0x0 | flex | visible | 1 | no | no | no | **true** |
-| Alpaca trader 3 | 0x0 | flex | visible | 1 | no | no | no | **true** |
+Alpaca cards (1, 2, 3) — wrapper removed outright:
 
-A name-based query of the page's accessibility tree with the Alpaca trader 1
-Options panel expanded still returns
-`checkbox "Also restart the connection to Interactive Brokers"` on all five
-cards, the Alpaca ones included. The issue's Expected asks for the control to
-leave **both** the accessibility tree and the tab order; half of that is in
-place.
+```
+input.tc-restart-gateway-chk   disabled: true
+  label                        display: flex
+    div.tc-field-ibkr          display: none   hidden: true    <-- removed here
+      div                      display: flex
+        div.tc-options         display: block  (panel expanded)
+```
+
+IBKR cards (live, paper) — wrapper present and enabled, correctly:
+
+```
+input.tc-restart-gateway-chk   disabled: false
+  label                        display: flex
+    div.tc-field-ibkr          display: block  hidden: false
+      div                      display: flex
+        div.tc-options         display: none   (panel merely collapsed)
+```
+
+`display:none` + `hidden` + `disabled` on the Alpaca cards is precisely the
+issue's Expected: out of the accessibility tree and out of the tab order. The
+0x0 seen on the IBKR cards was the collapsed panel, nothing more.
+
+Also wrong in the reopen: the browser pane's `find` tool was cited as proof the
+checkbox was "still in the accessibility tree". It matches DOM nodes, not the
+rendered tree — it returned the same checkbox for cards whose Options panel was
+collapsed, which should have given the game away.
+
+Two process notes for future runs:
+- Walk the ancestor chain before concluding an element is still exposed.
+- The senior-qa run at 07:1xZ the same morning had already recorded "#273
+  verified fixed" in `state/known-open.md`. This run read that file only after
+  acting. Read the current snapshot's verification notes before reopening.
 
 ## Commented, left closed — not re-testable by this suite
 
