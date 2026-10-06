@@ -1,0 +1,40 @@
+Source: GET /api/logs/tenant-a2fd764b-af76-4ff5-b0f6-b97e50bbfc5d-ibkr_live/tail?lines=2000
+Read read-only from the signed-in browser pane on 2026-10-06 at 08:0xZ by the
+"reverify" scheduled check. Trader: g***@gmail.com / ibkr_live (slot 1), the
+account named in issue #287 (deposit 2026-10-02 +$4,900.11).
+IB error 10167 market-data lines removed; nothing else edited.
+
+--- the 2026-10-05 buying pass (the one the issue was closed on) ---
+[2026-10-05 13:30:00] open settle: waiting 2m after 09:30 ET before buys
+[2026-10-05 13:36:06] BUY TEAM $751 (price ~188.37)
+[2026-10-05 13:36:06] buy skip CORT: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip OKTA: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip HNGE: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip PANW: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip ACVA: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip INTC: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip SNOW: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip NBIS: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip GTLB: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip FTNT: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip BE: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip TENB: $186 below min trade $250
+[2026-10-05 13:36:06] buy skip RVMD: $186 below min trade $250
+[2026-10-05 13:36:07] buy skip RNG: $186 below min trade $250
+[2026-10-05 13:36:07] buys complete: 1 orders ['TEAM']
+[2026-10-05 13:41:37] state: fill confirmed for TEAM qty=3.0 - promoted from in_flight
+
+--- the same pass on the other three IBKR traders, same day ---
+(all three fully invested, so no buy; each reports its REAL residual cash)
+a2fd764b ibkr_paper  [2026-10-05 17:04:37] buy skip MXL: $19 below min trade $250
+                     [2026-10-05 17:04:37] buys complete: 0 orders - keeping 62 candidates (cash/sizing blocked; buy slot not consumed)
+29ec8f33 ibkr_paper  [2026-10-05 15:40:37] buy skip MXL: $73 below min trade $250
+                     [2026-10-05 15:40:38] buys complete: 0 orders - keeping 64 candidates (cash/sizing blocked; buy slot not consumed)
+29ec8f33 ibkr_live   [2026-10-05 16:05:31] buy skip UMC: $61 below min trade $250
+                     [2026-10-05 16:05:31] buys complete: 0 orders - keeping 46 candidates (cash/sizing blocked; buy slot not consumed)
+
+--- current state of the a2fd764b ibkr_live trader ---
+[2026-10-06 05:10:47] account: U271... equity $16,944.97 cash $171.53 (LIVE) trading_mode=live
+status page 2026-10-06 07:58:19Z: 10 open positions, cash $172, Last scan 2026-10-06, running/ready
+Entry size panel: at $16,944.96 equity each new entry is $3,300 (fixed entry amount);
+max-position cap 20% = $3,388.99 not reached.
