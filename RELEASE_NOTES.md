@@ -11,7 +11,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 ### Added
 
 - **Pick which report emails you get.** Settings → Notifications has three checkboxes: **Daily**, **Weekly** and **Monthly**. Weekly and monthly are on and daily is off unless you change them. If you had turned email off before, the weekly and monthly reports start off too.
-- **One email for all your traders.** Each report covers every trader you have turned on: your profit and return for the period next to QQQ and SPY, your account value, the stocks bought and sold, what you hold now, and how many stocks are on the buy list for the next open. A box at the top tells you when a trader needs your attention (for example, it is locked or stopped). Each trader has a link to its own page.
+- **One email for all your traders.** Each report covers every trader you have turned on: your profit and return for the period next to QQQ and SPY, your account value, the stocks bought and sold, what you hold now, and the top candidates from the latest scan for the next open. If you have both real-money and paper traders, the email says so next to the totals. A box at the top tells you when a trader needs your attention (for example, it is locked or stopped). Each trader has a link to its own page.
 - **The weekly report** arrives Friday after the US close. It shows the week day by day, how many sales made a profit, and your best and weakest trade.
 - **The monthly report** arrives after the last trading day of the month. It shows the month week by week, how many days were up, the best and worst day, the deepest dip, money you added or withdrew, and the year so far.
 
