@@ -19,6 +19,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 - **The old end-of-day summary, one email per trader, is replaced by the daily report.** It is off by default; tick **Daily** in Settings to get it, now as one email for all your traders.
 - **"Email alerts" in Settings now covers only warnings and errors** from your traders. The reports have their own checkboxes.
+- **Privacy Policy updated (6 October 2026)** to describe the report emails and their defaults. You will be asked to confirm it once the next time you use the site.
 
 ---
 
