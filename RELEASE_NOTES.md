@@ -6,6 +6,16 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-06 — Set up three Alpaca paper traders in one go
+
+### Added
+
+- **New accounts can run three Alpaca paper traders right away.** Until now a new account started with one, and you had to ask an administrator for more. You can now add up to three yourself. Existing accounts are not affected.
+- **The guided Alpaca setup leads you to your next trader.** When a trader is turned on, the last screen offers **Set up another paper trader**. For your second and third trader the setup starts at "open a paper account", since you already have an Alpaca login. Each trader needs its own Alpaca paper account. Alpaca allows three paper accounts per login, and the first $100,000 one counts toward that.
+- **Connect with Alpaca (trying it out first).** A new way to connect a paper account: you approve Robo Trader on Alpaca's own page, so there are no API keys to copy and no vault passphrase to remember. It is only switched on for a few accounts while we test it. Pasting API keys stays available and works exactly as before.
+
+---
+
 ## 2026-10-04 — Clearer Home cards, Israel time, and plain "Sell now" confirmations
 
 ### Added
