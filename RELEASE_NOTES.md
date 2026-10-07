@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-07 — Rules comparison is easier to scan; profit and loss by stock
+
+### Added
+
+- **A "P&L by symbol" table on simulation results and trader pages.** It shows how much of the closed-trade profit or loss came from each stock, with its share of the total and the number of trades. On a trader page it covers only that trader's own trades and says whether the account is paper or live. Your headline returns and the QQQ/SPY comparison are unchanged. ([#245](https://github.com/guymaim/robo-trader/issues/245))
+
+### Changed
+
+- **Rules comparison marks the best and worst result.** In each period the highest and lowest return are marked with the words "best" and "worst" (not only by color), and the rule name stays in view as you scroll across the periods. Sort links now say 1, 3, 6, 12, 18 and 24 months; old bookmarked links still work. ([#254](https://github.com/guymaim/robo-trader/issues/254))
+
+---
+
 ## 2026-10-07 — A recovered trader clears its warning; a broker disconnect no longer stops buying
 
 ### Fixed
