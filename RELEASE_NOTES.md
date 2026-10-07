@@ -6,6 +6,16 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-07 — A recovered trader clears its warning; a broker disconnect no longer stops buying
+
+### Fixed
+
+- **The "The trader reported a problem" notice now goes away by itself.** After a short error that the trader recovered from (for example, the broker briefly answering with an error), the notice used to stay on the trader card until the trader was restarted. It now clears once the trader has been running normally for a few minutes. Serious problems (wrong keys, rejected orders, a halt, not enough cash) still stay until they are resolved. ([#296](https://github.com/guymaim/robo-trader/issues/296))
+- **Admin: "Today" in the All tenants table matches the trader cards.** Outside the trading session the table showed an overnight figure while the cards showed a dash; both now show a dash until the session starts. This affects admins only. ([#295](https://github.com/guymaim/robo-trader/issues/295))
+- **A broker disconnect no longer triggers a false "Max daily loss" stop.** If the broker connection dropped while an account was being read, the trader could see a value of $0 and halt buying for the day as if the account had lost money. The trader now treats an empty account read as a connection problem and does not run the loss check on it. No real loss was involved. ([#298](https://github.com/guymaim/robo-trader/issues/298))
+
+---
+
 ## 2026-10-07 — Save buttons, on/off switches and Admin tabs
 
 ### Changed
