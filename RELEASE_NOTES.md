@@ -16,6 +16,16 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-07 — Easier Authenticator code entry
+
+### Changed
+
+- **The 6-digit Authenticator code is now six boxes.** It looks the same everywhere the site asks for it: signing in, confirming it is you, Sell now, and setting up or replacing your Authenticator in Security settings.
+- **It checks itself.** As soon as you type the sixth digit the code is sent; there is no need to press Verify.
+- **You can paste the code.** Paste all six digits into any box (spaces are ignored) and they fill in for you. ([#306](https://github.com/guymaim/robo-trader/issues/306))
+
+---
+
 ## 2026-10-06 — Choose your report emails: daily, weekly, monthly
 
 ### Added
