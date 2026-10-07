@@ -6,11 +6,13 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
-## 2026-10-07 — Rules comparison is easier to scan; profit and loss by stock
+## 2026-10-07 — Rules comparison is easier to scan; profit and loss by stock, a trade Journal
 
 ### Added
 
 - **A "P&L by symbol" table on simulation results and trader pages.** It shows how much of the closed-trade profit or loss came from each stock, with its share of the total and the number of trades. On a trader page it covers only that trader's own trades and says whether the account is paper or live. Your headline returns and the QQQ/SPY comparison are unchanged. ([#245](https://github.com/guymaim/robo-trader/issues/245))
+
+- **A Journal page for your own trades.** See your paper and live fills and your simulated trades in one list, add a short private note (up to 500 characters) and a tag (planned, mistake, news or rule) to any row, and download the filtered list as a CSV file. Only you can see your journal and notes. Simulated trades are marked as hypothetical. ([#244](https://github.com/guymaim/robo-trader/issues/244))
 
 ### Changed
 
