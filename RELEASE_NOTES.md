@@ -6,6 +6,16 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-07 — Save buttons, on/off switches and Admin tabs
+
+### Changed
+
+- **Settings only change when you click Save.** Report emails, each trader's options (rule file and the two approval switches), the automatic IB Gateway sign-in, the color theme and the display currency now each have a **Save** button. Picking something only marks it; nothing is stored until you click Save, and the button stays off until you have changed something. ([#303](https://github.com/guymaim/robo-trader/issues/303))
+- **Every checkbox on the site is now an on/off switch.** The switch shows ON or OFF in words, not only by color, and works with the keyboard and screen readers. In Settings → Report emails the switches and their text now line up on the same row. ([#304](https://github.com/guymaim/robo-trader/issues/304))
+- **The Admin page is split into tabs** (Sign-ups, Users, Traders, Rule files, Runs) instead of one long page. A tab has its own link, so a reload or a shared link opens the same tab. ([#305](https://github.com/guymaim/robo-trader/issues/305))
+
+---
+
 ## 2026-10-06 — Choose your report emails: daily, weekly, monthly
 
 ### Added
