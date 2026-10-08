@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-08 — Order history no longer mixes when a trader moves to another broker account
+
+### Fixed
+
+- **A trader's orders, executions and trades no longer show another account's history.** If the broker account behind a trader's keys changes (for example, two traders had their keys swapped), the Closed orders, Executions and Trades pages could list the other account's orders and fills, and the invested total could be roughly double. When the trader notices its account changed, it now starts its history from that point and hides the earlier orders and fills of the other account. A normal restart changes nothing. The two affected test traders were repaired. For about a day, six traders briefly showed empty order history because of an early version of this change; it was reverted and their full history is back. ([#301](https://github.com/guymaim/robo-trader/issues/301))
+
+---
+
 ## 2026-10-07 — Rules comparison is easier to scan; profit and loss by stock, a trade Journal
 
 ### Added
