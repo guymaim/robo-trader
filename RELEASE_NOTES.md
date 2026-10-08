@@ -14,6 +14,19 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-08 — Rule name and converted profit on your home cards; one display currency in the header
+
+### Added
+
+- **Each trader card on your home page now shows the rules it follows**, for example "Rules: 04. Balanced long hold" or the name you gave your own rule.
+- **Today and Total P&L on the home cards, and the totals at the top, now show the amount converted to your display currency** (for example "≈ ₪1,250") under the dollar figure. Choose US dollar to hide it. The rate is indicative and for information only.
+
+### Changed
+
+- **The Display currency choice moved out of the trader page.** It now sits in the header of every signed-in page, next to Theme, and applies to all your traders. It is also in Settings.
+
+---
+
 ## 2026-10-08 — Pause new buys on a trader
 
 ### Added
