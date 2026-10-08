@@ -14,6 +14,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-08 — The trader page shows your last numbers while it loads
+
+### Fixed
+
+- **The trader page no longer starts empty, and no longer ends in a bare "error".** While the latest data loads, the page now shows the last numbers it has for that trader (the badge says "updating…"), then replaces them. If a refresh fails, the numbers stay on screen with a "stale" badge that says why (the server was slow, or you were signed out, with a sign-in link) and the page tries again by itself. Slow outside price lookups no longer hold the page up. The saved copy stays on your device only, belongs to your sign-in, and is removed when you log out. ([#311](https://github.com/guymaim/robo-trader/issues/311))
+
+---
+
 ## 2026-10-07 — Rules comparison is easier to scan; profit and loss by stock, a trade Journal
 
 ### Added
