@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-08 — See your recent sign-ins
+
+### Added
+
+- **Settings → Security now lists your last 10 sign-ins.** Each line shows the time (UTC), the browser and system, a partly hidden network address (for example `203.0.113.*`) and how you signed in, so you can spot a sign-in you don't recognise. Only completed sign-ins of your own account appear. ([#297](https://github.com/guymaim/robo-trader/issues/297))
+
+### Changed
+
+- **The page no longer promises a list of signed-in devices.** It cannot show who is signed in right now; it says so plainly. The **Sign out everywhere else** button works as before.
+
+---
+
 ## 2026-10-08 — Clearer status labels on your trader page
 
 ### Changed
