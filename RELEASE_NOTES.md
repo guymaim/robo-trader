@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-08 — A "Last scan" list on your trader page; a text summary under the run charts
+
+### Added
+
+- **Your trader page now has a "Last scan" section above your positions.** For each stock the latest scan considered, it shows one line: bought, skipped, or rejected, with the reason in plain words (for example, "Opened 6.2% above the signal close; your cap is 5.0%" or "The broker refused the order: not enough cash"). If nothing was bought because the market is closed or buying is paused, it says so instead of showing an empty list. It shows the first 5 lines, with a button for the rest, up to 30 lines. It works for paper and live traders, only displays information, and never shows account numbers or keys. ([#260](https://github.com/guymaim/robo-trader/issues/260))
+
+### Changed
+
+- **Simulation results come with a plain-text summary of the equity curve.** It gives the start and end value, the return, and the deepest drop from a previous high, compared with the benchmarks. The charts scroll inside their own box on phones. Older runs without a stored daily equity series say "Chart needs a new run" instead of showing an empty chart. ([#253](https://github.com/guymaim/robo-trader/issues/253))
+
+---
+
 ## 2026-10-08 — Order history no longer mixes when a trader moves to another broker account
 
 ### Fixed
