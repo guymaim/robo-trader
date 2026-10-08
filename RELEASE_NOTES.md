@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-08 — Pause new buys on a trader
+
+### Added
+
+- **You can pause new buys on any trader from its page.** While paused, the trader does not open new positions, but your stop-loss, take-profit and time-stop exits and Sell now keep working. Orders already sent to your broker are not cancelled. Choose an end time of up to 7 days, or pause until you resume. The trader page and your home card show when buys are paused. The trader notices a pause or resume within a few minutes (up to 5 while the market is open). After you resume, new buys come from the next evening scan. Resuming a live trader asks for your Authenticator code; pausing never does. Your broker connection and Authenticator are not changed. ([#248](https://github.com/guymaim/robo-trader/issues/248))
+
+---
+
 ## 2026-10-08 — A "Last scan" list on your trader page; a text summary under the run charts
 
 ### Added
