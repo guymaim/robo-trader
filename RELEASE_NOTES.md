@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-08 — Clearer status labels on your trader page
+
+### Changed
+
+- **The status strip on your trader page uses plain words.** "Pod" or "Pool" is now **Connection** (whether the trader is connected to your broker). **Approve buys** shows just ON or OFF. **Open confirm** is now **Buy check after open**, and the technical line next to your rules is a plain sentence that only appears when your rules use that check. Nothing about how your trader behaves has changed.
+
+---
+
 ## 2026-10-08 — Pause new buys on a trader
 
 ### Added
