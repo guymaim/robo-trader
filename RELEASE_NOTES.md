@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-09 — "Today" keeps showing after the market closes
+
+### Changed
+
+- **Today's profit and loss no longer turns into a dash when the market is closed.** On your trader page, your home cards and totals, and the admin's all-traders table, "Today" now shows how your account moved compared with the previous close, including after-hours prices. This matches the Today column in your portfolio table. The QQQ and SPY comparisons still appear only during a session.
+
+---
+
 ## 2026-10-08 — See your recent sign-ins
 
 ### Added
