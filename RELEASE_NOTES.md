@@ -6,6 +6,15 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-10 — Whole shares only on Alpaca too
+
+### Changed
+
+- **Alpaca traders now buy whole shares only, the same as Interactive Brokers traders.** Each buy is rounded down to a whole number of shares (for example 31 shares instead of 31.42), and the money left over stays available for the next stock on the buy list. If the amount for a stock is less than the price of one share, that buy is skipped and the trader's log says so. Shares you already hold, including fractions bought earlier, are sold normally. ([#324](https://github.com/guymaim/robo-trader/issues/324))
+- **Realistic simulations and the Compare Rules page buy whole shares too**, so simulated and live results stay comparable. Idealised runs still allow fractions. Results saved before this change are marked as using the earlier model.
+
+---
+
 ## 2026-10-10 — Simulations now include a $2.50 fee per order
 
 ### Changed
