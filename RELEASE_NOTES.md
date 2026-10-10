@@ -15,6 +15,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-10 — See the commissions a simulation paid
+
+### Added
+
+- **A simulation's result page now shows the commissions it paid.** The summary has a "Commissions paid" figure with the number of orders, the fee per order and the share of your starting capital it took. The trades list has a new "Fees $" column for each sale (a position's first sale also carries its buy fee). Fees are already included in the return and final equity; the per-trade profit column does not subtract them. Runs with no fee per order, such as Idealised runs, show $0.00. ([#323](https://github.com/guymaim/robo-trader/issues/323))
+
+---
+
 ## 2026-10-10 — Simulations now include a $2.50 fee per order
 
 ### Changed
