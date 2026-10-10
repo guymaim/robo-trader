@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-10 — Simulations now include a $2.50 fee per order
+
+### Changed
+
+- **Realistic simulations and the Compare Rules page now charge a flat $2.50 for every buy and every sale**, like an Interactive Brokers account. Results are a little lower than before, most for rules that trade often or in small amounts. Idealised runs still have no costs. Results saved before this change keep their old numbers and are marked as using the earlier cost model, so don't compare them directly with new ones. The Compare Rules page refills with the new numbers over the next hours.
+
+---
+
 ## 2026-10-09 — "Today" keeps showing after the market closes
 
 ### Changed
