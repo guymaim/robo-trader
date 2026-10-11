@@ -6,6 +6,16 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-11 — Simulations follow the live traders more closely
+
+### Changed
+
+- **The simulator's trailing stop works the way the live trader's does again.** Earlier today the simulator's stop started moving up with each day's intraday high, on the assumption that the live trader does the same. It does not: a trader's stop moves up with the closing prices it checks near the end of each day. So the simulator was selling winners earlier than real traders and showing lower returns than they really got. The stop is back to following closing prices, and the day a stock is bought no longer raises it. Realistic and Idealised backtest returns move as a result.
+- **Realistic simulations now stop buying for the rest of a day once the account is down 7% that day**, exactly like every live trader's built-in safety limit, even when a rule file allows a bigger daily loss. The run page lists it among the Realistic assumptions. Idealised simulations are unchanged.
+- **Compare Rules days computed before this change are marked "earlier cost model"** until they have been recomputed.
+
+---
+
 ## 2026-10-11 — First buys at the next open, and a safer evening scan
 
 ### Changed
@@ -13,7 +23,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 - **A trader you create during market hours now places its first buys at the next market open.** Until now a trader started mid-session bought its whole first list within seconds, at that moment's prices, from the previous day's scan. The simulator only ever buys at the open, so the first day of a new trader now looks the same in both. A trader created before the open still buys at that day's open. Restarting a trader does not delay anything.
 - **The evening scan refuses to publish a candidate list when the day's price data was incomplete.** If the data source is slow or throttled after the close, the scan waits and tries again instead of scanning the few stocks it managed to download; your trader keeps its previous list until a complete scan succeeds. On 2026-10-09 two rules scanned only a fraction of the market and traders on them were handed a wrong (or empty) list for Monday; this change prevents a repeat.
 - **Sorting the Compare Rules table no longer jumps to the top of the page.** Selecting a column heading keeps you where you were in the table, including how far you had scrolled sideways.
-- **Simulations track winners the way the live trader does.** The simulator's trailing stop now moves up with each day's high (including the day a stock was bought), as the trader does from its intraday prices. Simulated exits land on the same day as live ones more often; Realistic backtest returns shift slightly as a result.
+- ~~**Simulations track winners the way the live trader does.** The simulator's trailing stop now moves up with each day's high.~~ Withdrawn the same day: the live trader does not work that way (see the entry above).
 
 ---
 
