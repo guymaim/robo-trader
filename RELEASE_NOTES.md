@@ -39,6 +39,22 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-11 — Buys after a take-profit now wait for the close, like the simulator
+
+### Changed
+
+- **When your trader could not buy at the open because all your cash was invested, it now buys in the last minutes before the close, not right after a take-profit frees cash during the day.** The simulator has always worked this way: a day whose morning buys were blocked for cash is tried again once at that day's close, after the day's sales. Your live trader used to buy a few minutes after an intraday take-profit, at a mid-day price the simulation never paid. Live results now follow the simulated ones more closely.
+- **Only the stocks that were blocked for cash are tried again.** A stock skipped at the open because it jumped too far (the gap-up limit) or because of your position-size limit is skipped for the day, as in the simulator, instead of being retried all day.
+- **The retry never carries into the next day.** The next day's buys come from the next evening's scan.
+- **Your rule's "retry blocked buys" setting now applies to the live trader too.** Library rules and the site's realistic simulation have it on; a rule that sets it to 0 buys nothing on such a day, on the site and live alike.
+
+### Notes
+
+- Nothing changes on days when the trader bought something at the open, and sells, stops and take-profits run exactly as before.
+- Applies to new trader versions as they roll out to your account.
+
+---
+
 ## 2026-10-08 — See your recent sign-ins
 
 ### Added
