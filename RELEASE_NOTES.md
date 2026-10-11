@@ -12,6 +12,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 - **A trader you create during market hours now places its first buys at the next market open.** Until now a trader started mid-session bought its whole first list within seconds, at that moment's prices, from the previous day's scan. The simulator only ever buys at the open, so the first day of a new trader now looks the same in both. A trader created before the open still buys at that day's open. Restarting a trader does not delay anything.
 - **The evening scan refuses to publish a candidate list when the day's price data was incomplete.** If the data source is slow or throttled after the close, the scan waits and tries again instead of scanning the few stocks it managed to download; your trader keeps its previous list until a complete scan succeeds. On 2026-10-09 two rules scanned only a fraction of the market and traders on them were handed a wrong (or empty) list for Monday; this change prevents a repeat.
+- **Sorting the Compare Rules table no longer jumps to the top of the page.** Selecting a column heading keeps you where you were in the table, including how far you had scrolled sideways.
 - **Simulations track winners the way the live trader does.** The simulator's trailing stop now moves up with each day's high (including the day a stock was bought), as the trader does from its intraday prices. Simulated exits land on the same day as live ones more often; Realistic backtest returns shift slightly as a result.
 
 ---
