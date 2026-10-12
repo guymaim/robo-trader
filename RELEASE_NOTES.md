@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-12 — Four more rules in the library (24–27)
+
+### Added
+
+- **Rules 24–27 are now in the rule library.** They are the four "playbook" rules the adaptive rules already used behind the scenes to pick a style for rising, falling and jumpy markets (24, 25, 26) and for the learned-modes picker (27). You can now choose them on their own, compare them on Compare Rules and run simulations with them, like any other library rule. Rules that already used them behave exactly as before.
+
+---
+
 ## 2026-10-11 — Simulations follow the live traders more closely
 
 ### Changed
