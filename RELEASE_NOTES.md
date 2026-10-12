@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-12 — Compare Rules marks days from an older simulator
+
+### Changed
+
+- **Days computed with an older version of the simulator are labelled "old model".** When the simulator gets an update, Compare Rules now computes every saved day again with the new version. Until a day is done, the day list shows it as "(old model)" and the day's page says so. The label goes away by itself once the day has been recomputed. Before this, only some days were redone and nothing showed which ones were still old.
+
+---
+
 ## 2026-10-12 — Admins see each trader's rule file
 
 ### Added
