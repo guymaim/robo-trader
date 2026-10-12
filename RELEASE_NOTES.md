@@ -6,6 +6,16 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-12 — Traders buy only at the market open, and there is no maximum holding period
+
+### Changed
+
+- **Traders now buy only in the first minutes of the trading day.** Each day's buys are placed from 9:32 to 9:45 am New York time. If the broker refuses an order or has no price yet, the trader tries again until 9:45, and after that the day's buy list is dropped. Nothing is bought later in the day any more, including at the end of a day when a sale has freed up cash, or after a trader restart in the middle of the day. The next buys come from the next evening's scan. Simulations buy at the open too, so a trader's buys and a simulation's buys line up.
+- **There is no maximum holding period any more.** Traders no longer sell a stock, or ask you to decide, because it has been held for a certain number of days. A position is sold only by the rule's other exits: trailing stop, take profit, the moving-average exits and the time stop. Snoozes and "disable max hold" choices you made earlier are cleared. The "Max hold — action required" panel and the Decide dialog are gone from the trader page, and the rule editor no longer offers the setting. **Sell now** stays on every position.
+- **"Confirm with a delay after the open" (open-confirm delay) is no longer used.** A rule that has it buys at the open like any other rule.
+
+---
+
 ## 2026-10-11 — Simulations follow the live traders more closely
 
 ### Changed
