@@ -6,6 +6,15 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-12 — Choose the rule file when you turn a trader on
+
+### Changed
+
+- **Enable now asks which rule file the trader should use** ([#335](https://github.com/guymaim/robo-trader/issues/335)). On the Settings page, Enable opens a window that shows the rule file the trader has now and the 5 best rules on Compare Rules over the last 90 days (switch to 30 or 60 days if you like), with a link to the full comparison. Keep the current rule or pick one of the five, then confirm; the trader turns on only after you confirm. Cancel changes nothing.
+- **New traders and the simulator start on the best recent rule.** The rule file a newly set-up trader starts on, and the one the simulator selects for you, is now the best rule on Compare Rules over the last 90 days. It follows the comparison by itself: each time Compare Rules adds a new day, the default can move to a new leader. **Traders you already have never change rule file because of this.** A default you picked yourself for the simulator still comes first.
+
+---
+
 ## 2026-10-12 — Four more rules in the library (24–27)
 
 ### Added
