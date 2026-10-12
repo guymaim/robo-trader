@@ -6,6 +6,20 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-12 — Realistic simulations trade the way the live platform does
+
+### Changed
+
+- **Realistic simulations and Compare Rules buy only at the open.** A buy that had no cash at the open is no longer tried again at the end of the day, the same as the live traders now.
+- **No maximum holding period in any simulation.** A rule's maximum-holding-period setting is ignored, Realistic or Idealised, so a position is sold only by the rule's other exits. Simulated returns change for every rule that had one, for many of them by a lot.
+- **Cash earns nothing on days a market-mode rule sits out (Realistic).** Some adaptive rules used to credit the Nasdaq-100 fund's return to idle cash on days they stayed out of the market. A live account keeps that money as cash, so Realistic simulations do too. Idealised runs keep the old behaviour.
+- **Realistic simulations follow the live traders' order limits:** no single buy over $6,000 and at most 10 orders at a time. A buy over the limit ends that day's buys, as it does for a trader.
+- **Rules with their own execution settings** keep their own trading costs, but the points above apply to them as well.
+- **"Confirm with a delay after the open" is no longer offered in the rule editor;** rules that have it buy at the open.
+- **Compare Rules days computed before this change are marked "earlier cost model"** until they have been recomputed.
+
+---
+
 ## 2026-10-11 — Simulations follow the live traders more closely
 
 ### Changed
