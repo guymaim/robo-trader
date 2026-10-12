@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-12 — Admins see each trader's rule file
+
+### Added
+
+- **A "Rules" column in the admin trader tables** (All tenants on the Home page and Trader status on the Admin page). It shows the rule each trader uses, with the file name on hover, and can be sorted ([#338](https://github.com/guymaim/robo-trader/issues/338)).
+
+---
+
 ## 2026-10-12 — Choose the rule file when you turn a trader on
 
 ### Changed
