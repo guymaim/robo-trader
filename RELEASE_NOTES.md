@@ -14,6 +14,15 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-12 — Traders never buy from an incomplete scan
+
+### Fixed
+
+- **A trader no longer buys from a candidate list that was built on incomplete market data** ([#334](https://github.com/guymaim/robo-trader/issues/334)). On Friday 2026-10-09 the market-data source throttled downloads; two rules' evening scans saw only part of the stock universe, and a trader started on Sunday still bought from one of those lists on Monday. Every stored scan now records how much of the universe it covered; a list that cannot show it covered enough is set aside, scanned again on complete data, and only then used. Traders that were waiting with the Friday lists were moved to the corrected lists on Monday afternoon.
+- **A slow or throttled data source no longer wipes saved price history.** Stocks that came back empty during throttling used to be treated as "no data" for the rest of the evening, so even a retry could not produce a complete list. They now keep their history and are downloaded again on the next attempt.
+
+---
+
 ## 2026-10-12 — Admins see each trader's rule file
 
 ### Added
