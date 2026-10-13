@@ -6,6 +6,22 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-13 — A new look for the site
+
+### Changed
+
+- **A cleaner, calmer design.** New colours, a new typeface and more consistent spacing across every signed-in page, in both dark (still the default) and light themes. Sections are separated by thin lines instead of boxes, and numbers line up in columns.
+- **A simpler menu.** The top menu is now **Traders** (an overview and each broker account), **Rules** (My rules, Compare rules), **Simulations** (New simulation, Runs) and **Journal**. Every page is still at the same address.
+- **A real menu on phones.** On narrow screens a **Menu** button opens the full list, instead of the links wrapping over three rows.
+- **Theme is in your account menu.** Choose System, Light or Dark from the menu under your name (it is also still in Settings).
+- **A shorter footer and a smaller cookie notice** that no longer covers the page.
+
+### Fixed
+
+- **Compare Rules:** the on/off switches for the table's columns covered the first letter of each column name.
+
+---
+
 ## 2026-10-13 — Realistic simulations trade the way the live platform does
 
 ### Changed
