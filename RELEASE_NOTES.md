@@ -6,16 +6,58 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
-## 2026-10-12 — Traders buy only at the market open, and there is no maximum holding period
+## 2026-10-13 — Traders buy only at the market open, and there is no maximum holding period
 
 ### Changed
 
-- **Traders now buy only in the first minutes of the trading day.** Each day's buys are placed from 9:32 to 9:45 am New York time. If the broker refuses an order or has no price yet, the trader tries again until 9:45, and after that the day's buy list is dropped. Nothing is bought later in the day any more, including at the end of a day when a sale has freed up cash, or after a trader restart in the middle of the day. The next buys come from the next evening's scan. Simulations buy at the open too, so a trader's buys and a simulation's buys line up.
+- **Traders now buy only in the first minutes of the trading day.** Each day's buys are placed from 9:32 to 9:45 am New York time. If the broker refuses an order or has no price yet, the trader tries again until 9:45, and after that the day's buy list is dropped. Nothing is bought later in the day any more, including at the end of a day when a sale has freed up cash, or after a trader restart in the middle of the day. The next buys come from the next evening's scan. Simulations buy at the open too, so a trader's buys and a simulation's buys line up. This applies to Alpaca traders from 13 October; Interactive Brokers traders follow on a later date, and until then they keep the old timing.
 - **There is no maximum holding period any more.** Traders no longer sell a stock, or ask you to decide, because it has been held for a certain number of days. A position is sold only by the rule's other exits: trailing stop, take profit, the moving-average exits and the time stop. Snoozes and "disable max hold" choices you made earlier are cleared. The "Max hold — action required" panel and the Decide dialog are gone from the trader page, and the rule editor no longer offers the setting. **Sell now** stays on every position.
 - **"Confirm with a delay after the open" (open-confirm delay) is no longer used.** A rule that has it buys at the open like any other rule.
 - **If you approve buys by hand, approvals now expire at 9:45 am New York time.** A candidate you have not approved by then is dropped for the day. The approval panel on the trader page says so.
 - **If a day's buys could not be placed by 9:45 am, the trader page says so** under Last scan, and you get a warning if you use Slack alerts.
 - **The moving-average exits now use today's price.** Near the close, a trader checks the 20-day and 200-day averages, and the stop's volatility measure, using the current price as today's value, the same way the simulator uses the day's close. Before, they used a price from earlier in the morning.
+
+---
+
+## 2026-10-12 — Compare Rules marks days from an older simulator
+
+### Changed
+
+- **Days computed with an older version of the simulator are labelled "old model".** When the simulator gets an update, Compare Rules now computes every saved day again with the new version. Until a day is done, the day list shows it as "(old model)" and the day's page says so. The label goes away by itself once the day has been recomputed. Before this, only some days were redone and nothing showed which ones were still old.
+
+---
+
+## 2026-10-12 — Traders never buy from an incomplete scan
+
+### Fixed
+
+- **A trader no longer buys from a candidate list that was built on incomplete market data** ([#334](https://github.com/guymaim/robo-trader/issues/334)). On Friday 2026-10-09 the market-data source throttled downloads; two rules' evening scans saw only part of the stock universe, and a trader started on Sunday still bought from one of those lists on Monday. Every stored scan now records how much of the universe it covered; a list that cannot show it covered enough is set aside, scanned again on complete data, and only then used. Traders that were waiting with the Friday lists were moved to the corrected lists on Monday afternoon.
+- **A slow or throttled data source no longer wipes saved price history.** Stocks that came back empty during throttling used to be treated as "no data" for the rest of the evening, so even a retry could not produce a complete list. They now keep their history and are downloaded again on the next attempt.
+
+---
+
+## 2026-10-12 — Admins see each trader's rule file
+
+### Added
+
+- **A "Rules" column in the admin trader tables** (All tenants on the Home page and Trader status on the Admin page). It shows the rule each trader uses, with the file name on hover, and can be sorted ([#338](https://github.com/guymaim/robo-trader/issues/338)).
+
+---
+
+## 2026-10-12 — Choose the rule file when you turn a trader on
+
+### Changed
+
+- **Enable now asks which rule file the trader should use** ([#335](https://github.com/guymaim/robo-trader/issues/335)). On the Settings page, Enable opens a window that shows the rule file the trader has now and the 5 best rules on Compare Rules over the last 90 days (switch to 30 or 60 days if you like), with a link to the full comparison. Keep the current rule, pick one of the five, or choose any rule in the library from the list below them, then confirm; the trader turns on only after you confirm. Cancel changes nothing.
+- **New traders and the simulator start on the best recent rule.** The rule file a newly set-up trader starts on, and the one the simulator selects for you, is now the best rule on Compare Rules over the last 90 days. It follows the comparison by itself: each time Compare Rules adds a new day, the default can move to a new leader. **Traders you already have never change rule file because of this.** A default you picked yourself for the simulator still comes first.
+
+---
+
+## 2026-10-12 — Four more rules in the library (24–27)
+
+### Added
+
+- **Rules 24–27 are now in the rule library.** They are the four "playbook" rules the adaptive rules already used behind the scenes to pick a style for rising, falling and jumpy markets (24, 25, 26) and for the learned-modes picker (27). You can now choose them on their own, compare them on Compare Rules and run simulations with them, like any other library rule. Rules that already used them behave exactly as before.
 
 ---
 
