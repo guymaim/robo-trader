@@ -15,10 +15,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 - **A real menu on phones.** On narrow screens a **Menu** button opens the full list, instead of the links wrapping over three rows.
 - **Theme is in your account menu.** Choose System, Light or Dark from the menu under your name (it is also still in Settings).
 - **A shorter footer and a smaller cookie notice** that no longer covers the page.
+- **Your traders at a glance.** The home page shows the combined value of all your traders first, then one row per trader. Each trader page starts with a one-line summary of its health (for example, running normally, buys paused, or not connected) and shows the account total in large type.
+- **Questions and messages open in the page.** Confirmations such as starting or stopping a simulation, removing credentials, or confirming a real-money rule now open in a window on the page instead of the browser's own pop-up box. They ask the same things; real-money confirmations still need you to type the confirmation word.
+- **New simulation is easier to fill in.** The form has three parts: the rule, the period and money, and an Advanced part (closed until you open it) for the buy and sell settings. The maximum-holding-period field says that simulations ignore it.
+- **Settings has a section list** on wide screens, and a Save button shows "Unsaved changes" while it has something to save.
+- **Compare Rules:** the column switches are in a Columns menu, and the notes about how the comparison works are below the table.
+- **The public pages** (home page when signed out, sign-in, legal pages and setup guides) have the same look as the rest of the site. The setup guides now have numbered steps.
 
 ### Fixed
 
 - **Compare Rules:** the on/off switches for the table's columns covered the first letter of each column name.
+- **New simulation:** the on/off switches under Rule criteria were too narrow to see or click.
+- **My rules and the rule editor:** the on/off switches were squashed.
 
 ---
 
