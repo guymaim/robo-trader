@@ -6,7 +6,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
-## 2026-10-12 — Realistic simulations trade the way the live platform does
+## 2026-10-13 — Realistic simulations trade the way the live platform does
 
 ### Changed
 
@@ -17,7 +17,49 @@ For how we maintain this file, see the project’s internal contributor rules (`
 - **Realistic simulations follow the live traders' order limits:** no single buy over $6,000 and at most 10 orders at a time. A buy over the limit ends that day's buys, as it does for a trader.
 - **Rules with their own execution settings** keep their own trading costs, but the points above apply to them as well, together with whole shares only and the three-day wait before buying a stock again that every live trader uses.
 - **"Confirm with a delay after the open" is no longer offered in the rule editor;** rules that have it buy at the open.
-- **Compare Rules days computed before this change are marked "earlier cost model"** until they have been recomputed.
+- **Compare Rules days computed before this change are marked "(old model)"** until they have been recomputed.
+
+---
+
+## 2026-10-12 — Compare Rules marks days from an older simulator
+
+### Changed
+
+- **Days computed with an older version of the simulator are labelled "old model".** When the simulator gets an update, Compare Rules now computes every saved day again with the new version. Until a day is done, the day list shows it as "(old model)" and the day's page says so. The label goes away by itself once the day has been recomputed. Before this, only some days were redone and nothing showed which ones were still old.
+
+---
+
+## 2026-10-12 — Traders never buy from an incomplete scan
+
+### Fixed
+
+- **A trader no longer buys from a candidate list that was built on incomplete market data** ([#334](https://github.com/guymaim/robo-trader/issues/334)). On Friday 2026-10-09 the market-data source throttled downloads; two rules' evening scans saw only part of the stock universe, and a trader started on Sunday still bought from one of those lists on Monday. Every stored scan now records how much of the universe it covered; a list that cannot show it covered enough is set aside, scanned again on complete data, and only then used. Traders that were waiting with the Friday lists were moved to the corrected lists on Monday afternoon.
+- **A slow or throttled data source no longer wipes saved price history.** Stocks that came back empty during throttling used to be treated as "no data" for the rest of the evening, so even a retry could not produce a complete list. They now keep their history and are downloaded again on the next attempt.
+
+---
+
+## 2026-10-12 — Admins see each trader's rule file
+
+### Added
+
+- **A "Rules" column in the admin trader tables** (All tenants on the Home page and Trader status on the Admin page). It shows the rule each trader uses, with the file name on hover, and can be sorted ([#338](https://github.com/guymaim/robo-trader/issues/338)).
+
+---
+
+## 2026-10-12 — Choose the rule file when you turn a trader on
+
+### Changed
+
+- **Enable now asks which rule file the trader should use** ([#335](https://github.com/guymaim/robo-trader/issues/335)). On the Settings page, Enable opens a window that shows the rule file the trader has now and the 5 best rules on Compare Rules over the last 90 days (switch to 30 or 60 days if you like), with a link to the full comparison. Keep the current rule, pick one of the five, or choose any rule in the library from the list below them, then confirm; the trader turns on only after you confirm. Cancel changes nothing.
+- **New traders and the simulator start on the best recent rule.** The rule file a newly set-up trader starts on, and the one the simulator selects for you, is now the best rule on Compare Rules over the last 90 days. It follows the comparison by itself: each time Compare Rules adds a new day, the default can move to a new leader. **Traders you already have never change rule file because of this.** A default you picked yourself for the simulator still comes first.
+
+---
+
+## 2026-10-12 — Four more rules in the library (24–27)
+
+### Added
+
+- **Rules 24–27 are now in the rule library.** They are the four "playbook" rules the adaptive rules already used behind the scenes to pick a style for rising, falling and jumpy markets (24, 25, 26) and for the learned-modes picker (27). You can now choose them on their own, compare them on Compare Rules and run simulations with them, like any other library rule. Rules that already used them behave exactly as before.
 
 ---
 
