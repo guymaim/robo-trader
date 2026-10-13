@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-13 — The home page gets the new layout
+
+### Changed
+
+- **The home page has the same layout as the trader page.** A side menu on the left, the market, time, currency, refresh and theme along the top, then the combined value of all your traders with today's and total return, cash, open positions and how many traders are running, a Market box with QQQ and SPY today, a **Needs attention** list (shown only when something needs you), and one row per trader. Getting started stays until every step is done. **Overview** in the side menu now opens this page.
+
+---
+
 ## 2026-10-13 — A dashboard and a new trader page
 
 ### Added
