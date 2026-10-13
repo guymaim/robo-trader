@@ -6,6 +6,20 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-13 — A dashboard and a new trader page
+
+### Added
+
+- **Dashboard.** A new page (Traders → Dashboard) shows one trader at a glance: its value, today's return, a chart against QQQ and SPY, whether it is running normally, its holdings and its latest buys and sells. If you have more than one trader, pick one at the top of the side menu. Every action still happens on the trader's own page.
+
+### Changed
+
+- **The trader page has a new layout.** A side menu replaces the top menu on this page, and the market status, time, currency, refresh and theme are in a bar along the top. The page then shows, in order: tabs for your traders, the trader's name and status, its value with today's and total return, one chart with a Value / Drawdown switch and 1M / 3M / 1Y / All buttons, how it compares with QQQ and SPY, its status and safeguards, buys waiting for your approval, positions, the last scan next to recent activity, orders (open, closed and executions in tabs), closed trades next to results, and sector and exit-reason breakdowns. Everything that was on the page is still there.
+- **Last scan shows the queued candidates.** Before the next open, the trader's candidates are listed with "Queued for the next open" or "Waiting for approval", instead of an empty list.
+- **The entry-size explanation is no longer on the trader page.** It is still on New simulation, and the trader page still tells you when your trade size has drifted from where it started.
+
+---
+
 ## 2026-10-13 — A new look for the site
 
 ### Changed
