@@ -6,6 +6,21 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-13 — Realistic simulations trade the way the live platform does
+
+### Changed
+
+- **Past Realistic results did not trade the way a live account does, and Compare Rules' order of rules has changed.** Some market-mode rules credited the Nasdaq-100 fund's return to idle cash, which made their results look better than a live account could earn. Realistic simulations also bought stocks near the close after a morning buy had no cash, which moved results up for some rules and down for others. Live accounts do neither, and both are gone. Returns change for every rule, for some by a lot, and the order of rules on Compare Rules is different from before. Compare earlier results only with each other, not with new ones.
+- **Realistic simulations and Compare Rules buy only at the open.** A buy that had no cash at the open is no longer tried again at the end of the day, the same as the live traders now.
+- **No maximum holding period in any simulation.** A rule's maximum-holding-period setting is ignored, Realistic or Idealised, so a position is sold only by the rule's other exits. Simulated returns change for every rule that had one, for many of them by a lot.
+- **Cash earns nothing on days a market-mode rule sits out (Realistic).** Some adaptive rules used to credit the Nasdaq-100 fund's return to idle cash on days they stayed out of the market. A live account keeps that money as cash, so Realistic simulations do too. Idealised runs keep the old behaviour.
+- **Realistic simulations follow the live traders' order limits:** no single buy over $6,000 and at most 10 orders at a time. A buy over the limit ends that day's buys, as it does for a trader.
+- **Rules with their own execution settings** keep their own trading costs, but the points above apply to them as well, together with whole shares only and the three-day wait before buying a stock again that every live trader uses.
+- **"Confirm with a delay after the open" is no longer offered in the rule editor;** rules that have it buy at the open.
+- **Compare Rules days computed before this change are marked "(old model)"** until they have been recomputed.
+
+---
+
 ## 2026-10-13 — Traders buy only at the market open, and there is no maximum holding period
 
 ### Changed
