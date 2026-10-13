@@ -6,6 +6,21 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-14 — Every page gets the new layout
+
+### Changed
+
+- **The side menu is on every page.** Activity, Rules, Simulations, Settings, Help and Admin now open in the same layout as the home and trader pages: the side menu on the left, the market status, time, currency and theme along the top. The old top menu is gone; your account links (Security, Logs, Log out) are at the bottom of the side menu.
+- **Tabs for related pages.** Rules has **Compare** and **My rules**; Simulations has **Runs** and **New simulation**; Settings has **General**, **Security** and **Logs**; Admin has a tab for each admin page.
+- **Settings:** your traders come first, each as one row with its status, rule file and buttons; the trader name is under **Options**.
+- **Simulations:** New simulation shows a "Ready to run" summary next to the form, and Advanced settings start folded. A run's page opens with the final value and the chart, with the less used sections folded.
+- **Rules:** Compare puts the best rule of each period above the ranking; My rules shows each rule as a row with its status.
+- **Signed-out pages:** the sign-in, legal and help pages are laid out as cards and reading-width articles. No legal text changed.
+
+Every page is still at the same address and everything that was on a page is still there.
+
+---
+
 ## 2026-10-13 — The home page gets the new layout
 
 ### Changed
