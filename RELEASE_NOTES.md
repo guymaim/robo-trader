@@ -6,6 +6,22 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-14 — Trader page tweaks
+
+### Changed
+
+- **Total return is bigger** at the top of the trader page, the same size as Today return.
+- **7-day view** on the account chart: **7D** next to 1M, 3M, 1Y and All.
+- **Last scan takes less room:** each candidate is a small box with its outcome; **Show all** opens the rest.
+- **Orders opens on Executions** (Open and Closed are one click away).
+- **Your traders in the side menu:** on a trader page, your traders are listed under **Trading bot**, with the one you are looking at marked.
+
+### Fixed
+
+- **Sector view** on the Positions box now jumps to the sector allocation; before, it did nothing.
+
+---
+
 ## 2026-10-14 — Every page gets the new layout
 
 ### Changed
