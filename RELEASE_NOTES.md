@@ -13,7 +13,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 - **A day with no free cash is not a warning any more.** When all of a trader's money is invested, it cannot buy the day's candidates. That is normal, and the simulator buys nothing on such a day either. Before, the trader reported it as a lost buying day and sent an alert, often because the account sat a few cents below zero after the broker charged small sale fees. Now it is a plain note, with no alert. Real problems (orders the broker refused, missing prices, a mix of reasons) are still reported as before.
 - **Last scan says it plainly:** "No buys today: all the money is invested, so there was no free cash for the candidates." It no longer says new buys are paused below the cash-only floor for a few cents. A real shortfall of a dollar or more still shows as paused.
 
-Nothing changes in what the trader buys or sells.
+Nothing changes in what the trader buys or sells. Alpaca traders have this now; Interactive Brokers traders get it with their next update.
 
 ---
 
