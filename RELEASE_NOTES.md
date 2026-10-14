@@ -12,7 +12,7 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 - **Total return is bigger** at the top of the trader page, the same size as Today return.
 - **7-day view** on the account chart: **7D** next to 1M, 3M, 1Y and All.
-- **Last scan takes less room:** each candidate is a small box with its outcome; **Show all** opens the rest.
+- **Last scan takes less room:** each candidate is a small box with its outcome; **Show all** opens the rest. Candidates waiting for the next open no longer repeat "Queued for the next open" on every box.
 - **Orders opens on Executions** (Open and Closed are one click away).
 - **Your traders in the side menu:** on a trader page, your traders are listed under **Trading bot**, with the one you are looking at marked.
 
