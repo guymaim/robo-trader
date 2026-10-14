@@ -6,6 +6,17 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-15 — Traders and simulations decide the same way at the close and at the open
+
+### Changed
+
+- **Stops and moving-average exits are decided at the close, the way simulations decide them.** A trailing stop, a moving-average exit, a close-based take profit or a time stop now sells only in the last three minutes before 4:00 pm New York time, from the price at that moment. Before, the trader sold on the first check in the last twelve minutes, so a stock that dipped at 3:50 pm and recovered by the close could be sold when a simulation kept it. The stop level itself now moves up only from each day's closing price, as in simulations. Intraday take profits and **Sell now** work as before.
+- **Money from a sale is not reinvested the same morning.** The morning's buys are sized from the cash you had before that day's sales; money from a take profit or a stop that morning is used from the next day's buys on. Simulations already worked this way.
+- **Buys keep a small amount back for broker fees.** Brokers take some fees after a trade (for example small regulatory fees on sales, or IBKR commissions), which could leave an account a few cents below zero and stop the next day's buys. The trader now keeps a few dollars aside for them, and a whole-share buy leaves room for the fill to come in slightly above the quote, so a buy never spends more than the cash you have. An account a few cents below zero is treated as having no free cash for the day, not as a problem.
+- **Realistic simulations use buy prices measured from live trades.** Live buys at the open fill on average above the day's opening price, so Realistic simulations now assume 0.20% on every buy (before: 0.08%). Take profits in Realistic simulations are filled the way a trader checking every few minutes fills them, which means far fewer missed take profits. Results change for every rule, some by a lot, and the order of rules on Compare Rules changes; saved days show "(old model)" until they are recomputed. Compare earlier results only with each other.
+
+---
+
 ## 2026-10-14 — Fully invested days are no longer reported as problems
 
 ### Changed
