@@ -6,6 +6,17 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-15 — No more $6,000 limit per buy
+
+### Changed
+
+- **Your rule alone decides how much each buy is.** Traders and simulations no longer have a fixed limit of $6,000 per buy and per position. The size of each buy now comes only from your rule's **Entry notional $** and **Max position % of equity** (whichever is smaller) and from the cash you have. Buys are still cash only, never on margin.
+- **Why:** before, a buy that came out above $6,000 was not made smaller; it was refused, and that stopped all buys for the day. A rule with an entry size above $6,000, or a large percentage of an account that kept growing, stopped buying completely once the account grew past that point.
+- **Unchanged:** the 7% daily loss stop and the limit of 10 orders at a time.
+- **Simulations:** new Realistic runs follow the new behaviour. Runs saved before today are marked as not comparable with new ones.
+
+---
+
 ## 2026-10-15 — Easier-to-read rule explanations
 
 ### Fixed
