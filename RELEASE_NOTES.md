@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-15 — Easier-to-read rule explanations
+
+### Fixed
+
+- **Rule lists show one rule per line.** On a rule's explanation page, settings that list several rule files (for example the candidate rules an adaptive rule switches between) showed every file name run together in one long, wrapped line. Each rule file now has its own line, and file names have room to fit on one line instead of breaking in the middle.
+
+---
+
 ## 2026-10-15 — Traders and simulations decide the same way at the close and at the open
 
 ### Changed
