@@ -6,6 +6,19 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-16 — Trader page fixes: true numbers, plain words
+
+### Fixed
+
+- **Results match the closed trades.** The trader page's Results tile (trades, win rate, profit factor, average win and loss) now comes from the same closed trades as the closed-trades table, Exit reasons and P&L by symbol. Before, it counted only part of the trades and could show a profitable trader as a losing one. Profit factor is now measured in dollars. The tile is labelled **Closed trades**; it shows **Trades (log)** only for a trader whose trade history is not available (#351).
+- **The right number of buy candidates.** The one-line summary at the top of the trader page always said "7 buy candidates queued". It now shows the real number from the last scan, the same as the list below it (#355).
+- **Regime shows the rule it picked.** For a rule that switches between other rules, the Regime field showed "[object Object]". It now shows the rule in use and since when, for example "07. Balanced mid hold · since 2026-10-13", plus "sitting out" when it is (#352).
+- **Cash under $1 shows the cents.** Small amounts showed as "-$0" or "$0". They now show to the cent, for example "-$0.02". When fees posted after a fully invested day leave the cash a few cents below zero, the page says so in plain words: there is no free cash for buys until something is sold (#353).
+- **Days with no buys show up in Recent activity.** When a trader buys nothing at the open because all the money is invested (or buying was paused or failed), Recent activity now says so once that day, in plain words. Before, the day looked like the trader had simply done nothing (#358).
+- **Admin pages hide other people's email addresses from limited admins.** Two admin lists still showed full email addresses to admins with read-only access; they now show the masked form used everywhere else (#359). The parity page also lists the recent automatic daily scan checks (#349).
+
+---
+
 ## 2026-10-15 — No more $6,000 limit per buy
 
 ### Changed
