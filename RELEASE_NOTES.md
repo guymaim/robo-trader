@@ -6,6 +6,14 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-18 — How each trader did against QQQ since it started
+
+### Added
+
+- **vs QQQ since start on the Home page.** Each trader in the **Traders** list now also shows how it did against QQQ (the Nasdaq-100 fund) since its first day, next to the existing "vs QQQ today". It is the trader's total return (deposits and withdrawals left out) minus QQQ's return over the same days, the same figure as "vs QQQ since start" on the trader page. Admins see the same column in the all-traders tables.
+
+---
+
 ## 2026-10-16 — Trader page fixes: true numbers, plain words
 
 ### Fixed
