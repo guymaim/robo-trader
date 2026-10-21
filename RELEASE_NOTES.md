@@ -10,6 +10,15 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ### Added
 
+- **Compare Rules ranks rules by a score.** The new Score column replaces the average rank as the order of the
+  Compare Rules table and of "All saved days together". In each period a rule's return is divided by its
+  largest fall, so earning the same with a smaller drop scores higher. The result is compared with the typical
+  rule, so a large lead counts for more than a small one. Longer periods count more (the 24-month period 24 times
+  the 1-month one), so a few strong weeks no longer decide the order. A rule needs results on at least 80 % of
+  the days counted before it can lead, be offered when you turn a trader on, or become the default for new
+  traders; newer rules are marked "new". Rules that give the same result on most days are marked
+  "same results as …" and offered once. The average rank is still shown. New traders now start on the rule with
+  the best score over the last 90 days; existing traders keep their rule.
 - **My Rules reads your rule back in plain words** ([#255](https://github.com/guymaim/robo-trader/issues/255)).
   The review step of a new or edited rule now shows a short paragraph under the changes table: which stocks the
   rule picks, when it buys, how big each buy is, and when it sells. It follows your edits before you save. It
