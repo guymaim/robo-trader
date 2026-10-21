@@ -38,6 +38,13 @@ For how we maintain this file, see the project’s internal contributor rules (`
   table shows the total gains and losses. The dollar amounts are unchanged. This applies to trader pages and
   simulation results.
 
+- **IBKR sign-in messages** ([#384](https://github.com/guymaim/robo-trader/issues/384),
+  [#385](https://github.com/guymaim/robo-trader/issues/385)). If your IBKR account signs in automatically with an
+  authenticator key and the sign-in has not finished after five minutes, the "Action needed" message now says so
+  and that trading is paused, instead of asking you to approve a request in the IBKR mobile app that was never
+  sent. Accounts that approve on their phone keep the old message. A rare case where the trader page kept
+  showing "gateway starting" for a connected account no longer happens.
+
 - **Compare Rules score: two fairness fixes** ([#386](https://github.com/guymaim/robo-trader/issues/386),
   [#387](https://github.com/guymaim/robo-trader/issues/387)). In a period where a rule lost money, a deeper fall
   made the loss look smaller; now a loss is scored by its size alone, so a deeper fall never helps. A saved day
