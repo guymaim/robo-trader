@@ -6,6 +6,34 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-21 — Two new library rules for falling markets
+
+### Added
+
+- **30. Falling market: diversified, wider trail, earlier profit.** Rule 17 (diversified long holds with a time
+  stop) with a wider trailing stop (15 % instead of 7.5 %) and an earlier take profit (25 % instead of 40 %),
+  everything else unchanged. It was built for the kind of period that hurt in spring 2025, when the market fell
+  about a quarter and then recovered: in a simulation of 2025-02-01 to 2025-06-30 it made +33.6 % where rule 17
+  made +16.8 % and the Nasdaq-100 fund +6.8 %, and it also beat rule 17 in the five earlier fall-and-recovery
+  periods since 2020. You can pick it for a trader or a simulation like any other library rule.
+- **31. Adaptive: falling-market switch.** Follows rule 02 (aggressive, mid-length holds) while the market trends
+  up and switches to rule 30 when the Nasdaq-100 fund drops under its 20-day average and that average turns down,
+  staying with rule 30 for 40 trading days after the last such signal or until the fund makes a new 52-week high.
+  New in this rule: each position keeps the exits and sizing of the rule that picked it until it is sold, instead of
+  taking the switch rule's own settings. In the same simulations it made +33.9 % on spring 2025, beat rule 02 in
+  four of the five earlier fall-and-recovery periods and in the calm periods of 2026, and was ahead of rules 01 and
+  02 over 13 half-year periods since 2019. It spent about three quarters of all days in its "falling" setting, so
+  think of it as rule 30 with rule 02 for the strongest uptrends.
+
+### Unchanged
+
+- No trader was moved to these rules. The default rule for new traders still follows Compare Rules.
+
+*Past simulated results do not predict future results; these figures come from simulations with the site's
+Realistic cost model, not from live accounts.*
+
+---
+
 ## 2026-10-18 — How each trader did against QQQ since it started
 
 ### Added
