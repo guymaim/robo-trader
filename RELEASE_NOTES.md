@@ -6,6 +6,29 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-21 — Rule read-back, a real "page not found", privacy fixes
+
+### Added
+
+- **My Rules reads your rule back in plain words** ([#255](https://github.com/guymaim/robo-trader/issues/255)).
+  The review step of a new or edited rule now shows a short paragraph under the changes table: which stocks the
+  rule picks, when it buys, how big each buy is, and when it sells. It follows your edits before you save. It
+  describes the settings only; it makes no claim about results.
+
+### Fixed
+
+- **Page not found** ([#367](https://github.com/guymaim/robo-trader/issues/367)). A mistyped or outdated link now
+  shows a proper "Page not found" page with the site's header, footer and links back to the home page and the
+  guides, instead of two words on a blank page or the sign-in page. `/help` now opens the guides list.
+- **Contact address without JavaScript** ([#364](https://github.com/guymaim/robo-trader/issues/364)). The contact
+  address is now plain in every page, so it can be read and clicked with JavaScript turned off.
+- **Saved trader page copies** ([#363](https://github.com/guymaim/robo-trader/issues/363)). To show your trader
+  page faster, your browser keeps a copy of its last view. That copy no longer contains your email address in its
+  name, is kept at most 8 hours (was 24), and is removed when you sign out from any page, when your session ends,
+  or when the sign-in page opens. The Cookie Policy and the Privacy Policy now describe it.
+
+---
+
 ## 2026-10-21 — Two new library rules for falling markets
 
 ### Added
