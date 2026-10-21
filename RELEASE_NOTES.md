@@ -55,6 +55,15 @@ For how we maintain this file, see the project’s internal contributor rules (`
   made the loss look smaller; now a loss is scored by its size alone, so a deeper fall never helps. A saved day
   now counts for a rule only when the rule has results in at least 5 of the day's 6 periods, so a rule whose
   simulations mostly failed can no longer lead the list. The rule offered to new traders did not change.
+- **Compare Rules score: every rule is scored the same way on each day**
+  ([#392](https://github.com/guymaim/robo-trader/issues/392),
+  [#394](https://github.com/guymaim/robo-trader/issues/394),
+  [#395](https://github.com/guymaim/robo-trader/issues/395)). Some days are scored from the 24-month test split
+  into separate time blocks. On those days a rule now counts only with a result for every block; before, a rule
+  missing one block could still count. If one rule's 24-month test failed while its shorter periods finished, that
+  day is now scored from the periods for every rule, so that rule is no longer left out. The help text on the
+  Compare Rules page, the all-days table and the "new" label explain both cases. The order of the rules can change
+  a little, and with it the rule offered to new traders; existing traders keep their rules.
 - **Page not found** ([#367](https://github.com/guymaim/robo-trader/issues/367)). A mistyped or outdated link now
   shows a proper "Page not found" page with the site's header, footer and links back to the home page and the
   guides, instead of two words on a blank page or the sign-in page. `/help` now opens the guides list.
