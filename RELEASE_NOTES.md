@@ -38,6 +38,11 @@ For how we maintain this file, see the project’s internal contributor rules (`
   table shows the total gains and losses. The dollar amounts are unchanged. This applies to trader pages and
   simulation results.
 
+- **Rule 31 leaves falling mode on time** ([#381](https://github.com/guymaim/robo-trader/issues/381)). When the
+  Nasdaq-100 made a new 52-week high inside rule 31's 40-day falling-market window, the rule could stay in falling
+  mode for months afterwards. It now returns to its normal mode when the window ends. Only rule 31's results
+  change; saved Compare Rules days are recomputed over the next hours and show "(old model)" until then.
+
 - **IBKR sign-in messages** ([#384](https://github.com/guymaim/robo-trader/issues/384),
   [#385](https://github.com/guymaim/robo-trader/issues/385)). If your IBKR account signs in automatically with an
   authenticator key and the sign-in has not finished after five minutes, the "Action needed" message now says so
