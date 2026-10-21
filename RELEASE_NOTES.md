@@ -15,6 +15,11 @@ For how we maintain this file, see the project’s internal contributor rules (`
   rule picks, when it buys, how big each buy is, and when it sells. It follows your edits before you save. It
   describes the settings only; it makes no claim about results.
 
+- **Compare Rules marks days that lack the newest rules.** When rules are added to the library (rules 30 and 31
+  today), earlier saved days are filled in with them over the following hours. Until a day has them, the day list
+  shows "(missing rules)" next to it (like "(old model)"), and that day's page names the rules it does not have
+  yet. The label goes away once they are added.
+
 ### Fixed
 
 - **Page not found** ([#367](https://github.com/guymaim/robo-trader/issues/367)). A mistyped or outdated link now
