@@ -31,6 +31,13 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ### Fixed
 
+- **P&L by symbol no longer shows huge percentages** ([#390](https://github.com/guymaim/robo-trader/issues/390)).
+  The share column used to divide each stock's result by the net of all closed trades, so when gains and losses
+  nearly cancelled out it could read 1605 %. It is now "Share of gains / losses": a winner's share of all gains
+  and a loser's share of all losses, so the winners add up to 100 % and the losers to -100 %. The note above the
+  table shows the total gains and losses. The dollar amounts are unchanged. This applies to trader pages and
+  simulation results.
+
 - **Compare Rules score: two fairness fixes** ([#386](https://github.com/guymaim/robo-trader/issues/386),
   [#387](https://github.com/guymaim/robo-trader/issues/387)). In a period where a rule lost money, a deeper fall
   made the loss look smaller; now a loss is scored by its size alone, so a deeper fall never helps. A saved day
