@@ -6,9 +6,19 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
-## 2026-10-22 (later) — Adaptive rules read market breadth on every day
+## 2026-10-22 (later) — Market breadth on every day, newest prices kept, safer buys on delayed prices
 
 ### Fixed
+
+- **Price history keeps the newest day** ([#405](https://github.com/guymaim/robo-trader/issues/405)). A second
+  download late in the evening could come back without the latest trading day and replace history that already
+  had it. A download that is older than what is stored no longer overwrites it.
+- **Buys on delayed prices keep a wider safety margin** ([#406](https://github.com/guymaim/robo-trader/issues/406)).
+  When an Interactive Brokers account only has delayed quotes, whole-share buys now leave a 3 % margin instead of
+  0.5 %, so a buy filled above the delayed price can't take the account below zero cash. If a buy fills at a higher
+  price than planned, the rest of that morning's buys are sized from the cash really left. A cash shortfall is
+  reported at the open instead of later in the day. Stock choice and order are unchanged; on accounts with
+  delayed quotes, buys that cash limits get slightly fewer shares.
 
 - **Adaptive rules no longer depend on one stock's price history**
   ([#411](https://github.com/guymaim/robo-trader/issues/411)). Adaptive rules that pick a strategy each day with
