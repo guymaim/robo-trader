@@ -6,6 +6,17 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-22 — "Needs review" flags on deposits
+
+### Fixed
+
+- **A cleared "needs review" flag stays cleared** ([#401](https://github.com/guymaim/robo-trader/issues/401),
+  [#403](https://github.com/guymaim/robo-trader/issues/403)). When Alpaca reports a transfer with no dollar value
+  (for example shares moved in), the trader flags the account once, sends the same alert as other deposit
+  reviews, and no longer raises the flag again after an admin clears it. A later flag about a different transfer
+  now shows on the trader page; before, the page hid every flag once any one had been cleared. Deposits,
+  withdrawals and returns are unchanged.
+
 ## 2026-10-21 (later) — Stricter rule checks, quieter Compare Rules updates
 
 ### Fixed
