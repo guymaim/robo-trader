@@ -6,6 +6,19 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-22 (later) — Adaptive rules read market breadth on every day
+
+### Fixed
+
+- **Adaptive rules no longer depend on one stock's price history**
+  ([#411](https://github.com/guymaim/robo-trader/issues/411)). Adaptive rules that pick a strategy each day with
+  the learned model (01, 05, 06, 08, 11, 14, 15, 19 and 22) read market breadth: how many stocks are above their
+  long-term averages or near new highs or lows. Breadth followed the trading calendar of whichever single stock
+  had the longest price history, so a gap in that one stock's data blanked breadth for the whole market on those
+  days and could change the day's pick. Breadth now uses every trading day. Days with complete data give exactly
+  the same results as before. The Oct 20 and Oct 21 buy lists were computed with complete data and were correct.
+  Compare Rules recomputes its saved days for these rules.
+
 ## 2026-10-22 — "Needs review" flags on deposits
 
 ### Fixed
