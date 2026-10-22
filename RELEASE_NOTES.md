@@ -6,6 +6,35 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-21 (later) — Stricter rule checks, quieter Compare Rules updates
+
+### Fixed
+
+- **Signed-out visitors can no longer tell which private pages exist**
+  ([#374](https://github.com/guymaim/robo-trader/issues/374)). When you are signed out, any address outside the
+  public pages (legal, guides, about, contact) now goes to the sign-in page, whether the page exists or not.
+  Public pages that don't exist still show "page not found".
+- **Per-trader size limits apply to every rule of a switching rule**
+  ([#375](https://github.com/guymaim/robo-trader/issues/375)). A rule that switches between two rules (such as
+  library rule 31) used each rule's own buy size and ignored the size limits set on the trader for the rule it
+  switched to. The trader's limits now apply whichever rule produced the buy. Other rules are unchanged.
+- **Misspelled falling-market settings are refused**
+  ([#376](https://github.com/guymaim/robo-trader/issues/376)). A typo in the falling-market part of a rule used
+  to be ignored without a word, so the rule ran with the default value. Saving such a rule now fails with a
+  message naming the setting.
+- **One ATR length per switching rule** ([#377](https://github.com/guymaim/robo-trader/issues/377)). A switching
+  rule whose two rules set different ATR lengths quietly used only one of them in simulations. Such a rule is now
+  refused with a clear message. The library rules are not affected.
+- **Compare Rules no longer marks every day "old model" after each update**
+  ([#379](https://github.com/guymaim/robo-trader/issues/379)). A simulator update that gives the same results no
+  longer sends all saved days back for recalculation, so the "(old model)" label only appears when results can
+  really change.
+- **Compare Rules results stay on current prices** ([#378](https://github.com/guymaim/robo-trader/issues/378)).
+  If one of the helper machines that run part of the comparison failed to update its prices, it kept the old ones
+  until a restart and was skipped for the rest of the evening. It now tries again about 10 minutes later.
+
+---
+
 ## 2026-10-21 — Rule read-back, a real "page not found", privacy fixes
 
 ### Added
