@@ -6,6 +6,15 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-24 — Several simulations at once
+
+### Changed
+
+- **Run more than one simulation at a time.** You can now have up to three of your own simulations running
+  together: start another one from a new tab while the first is still running. When the site is busy with other
+  people's simulations, a new one waits in the queue and starts by itself. The traders-vs-simulator check and
+  Compare Rules also finish sooner.
+
 ## 2026-10-22 (later) — Market breadth on every day, newest prices kept, safer buys on delayed prices
 
 ### Fixed
