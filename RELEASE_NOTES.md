@@ -6,6 +6,32 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-25 — Fixes across the site, simulations and Interactive Brokers gateways
+
+### Fixed
+
+- **P/L by symbol** no longer shows a false "Partial breakdown" note caused by cent rounding ([#503](https://github.com/guymaim/robo-trader/issues/503)).
+- **Automatic rule names** no longer mention a max-hold limit; max hold is switched off for every rule ([#492](https://github.com/guymaim/robo-trader/issues/492)).
+  Names you already saved are not changed.
+- **Rule editor:** the hidden, retired max-hold value no longer blocks saving a rule, and a very large number now
+  shows a normal "enter a value from … to …" message instead of an error ([#507](https://github.com/guymaim/robo-trader/issues/507), [#508](https://github.com/guymaim/robo-trader/issues/508)).
+- **Compare Rules** keeps its "changed" markers and rank arrows while a new comparison has no results yet ([#509](https://github.com/guymaim/robo-trader/issues/509)).
+- **Exchange-rate note** shows when the rate was really set, not when the site fetched it ([#494](https://github.com/guymaim/robo-trader/issues/494)).
+- **Trader page with a slot you don't have** now shows the normal "page not found" page; so do a few other pages
+  that still showed a bare "Not found" ([#517](https://github.com/guymaim/robo-trader/issues/517)).
+- **Settings → Recent sign-ins** shows your last sign-ins even when many refused attempts are newer ([#505](https://github.com/guymaim/robo-trader/issues/505)).
+- **Live log viewer** no longer shows one log line split in two ([#501](https://github.com/guymaim/robo-trader/issues/501)).
+- **Runs list** no longer breaks when one run has an empty trade file ([#514](https://github.com/guymaim/robo-trader/issues/514)).
+- **Simulations:** a simulation that has just started is no longer marked as crashed by mistake, and a failed start
+  of one queued simulation no longer breaks other people's status checks ([#497](https://github.com/guymaim/robo-trader/issues/497), [#499](https://github.com/guymaim/robo-trader/issues/499)). Your limit on
+  simulations now counts ones waiting in the queue too: while you already have the maximum running or waiting, a
+  new one is refused with a message instead of piling up ([#498](https://github.com/guymaim/robo-trader/issues/498)).
+- **Reports by email:** a problem saving the "report sent" note no longer stops reports for everyone else ([#493](https://github.com/guymaim/robo-trader/issues/493)).
+- **Interactive Brokers gateways:** a sign-in problem at gateway start-up sends one alert instead of one on every
+  restart, and an alert is no longer lost when the chat service drops the connection; the email copy still
+  arrives ([#520](https://github.com/guymaim/robo-trader/issues/520), [#521](https://github.com/guymaim/robo-trader/issues/521)).
+- **Admin:** an admin can no longer switch off their own account or the last admin account ([#515](https://github.com/guymaim/robo-trader/issues/515)).
+
 ## 2026-10-24 — Several simulations at once
 
 ### Changed
