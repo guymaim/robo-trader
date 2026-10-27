@@ -6,13 +6,16 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
-## 2026-10-27 — Compare Rules: fewer errors, more history
+## 2026-10-27 — Compare Rules: fewer errors, more history; QQQ/SPY figures for Interactive Brokers traders
 
 ### Fixed
 
 - **Compare Rules** no longer keeps showing an error for a rule on a day when the price download was
   only temporarily incomplete: such a result is now tried again a few hours later
   ([#405](https://github.com/guymaim/robo-trader/issues/405)). Days that showed these errors fill in over the next hours.
+- **Interactive Brokers traders** now show their "compared with QQQ / SPY since start" figures. These stayed empty
+  because the comparison history was read from a data service these traders don't use; it now comes from the shared
+  price history ([#544](https://github.com/guymaim/robo-trader/issues/544)).
 
 ### Changed
 
