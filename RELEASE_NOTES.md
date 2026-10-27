@@ -6,6 +6,23 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-10-27 — Compare Rules: fewer errors, more history
+
+### Fixed
+
+- **Compare Rules** no longer keeps showing an error for a rule on a day when the price download was
+  only temporarily incomplete: such a result is now tried again a few hours later
+  ([#405](https://github.com/guymaim/robo-trader/issues/405)). Days that showed these errors fill in over the next hours.
+
+### Changed
+
+- **Compare Rules** now keeps 90 trading days of daily results and adds one day a week going back two years.
+  The older weeks are filled in gradually over the next few days.
+- The "first saved day of each week" choice in **All saved days together** now covers the last two years
+  (was 12 months).
+
+---
+
 ## 2026-10-25 — Fixes across the site, simulations and Interactive Brokers gateways
 
 ### Fixed
