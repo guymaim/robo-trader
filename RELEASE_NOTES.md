@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-11-01 — Interactive Brokers: lost connections are now noticed and repaired
+
+### Fixed
+
+- **Interactive Brokers traders** could sit idle when the connection to Interactive Brokers was lost while the
+  connection software still looked healthy. This happened on the night of October 31 to November 1, and traders
+  were not working for several hours on a Sunday, with the market closed. The connection is now checked with a real
+  request for your positions. If there is no answer for about 10 minutes it restarts by itself, and you are told if
+  it cannot reconnect.
+
+---
+
 ## 2026-10-27 — Compare Rules: fewer errors, more history; QQQ/SPY figures for Interactive Brokers traders
 
 ### Fixed
