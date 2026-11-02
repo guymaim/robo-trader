@@ -18,6 +18,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-11-02 — A trader in error now says why
+
+### Fixed
+
+- **A trader that keeps failing** now tells you why and since when, on its card on the home page and on its own
+  page. Before, it only said "error". For example, when an Interactive Brokers trader cannot reach its connection to
+  the broker, it now says so in plain words ([#555](https://github.com/guymaim/robo-trader/issues/555)).
+- **If a page fails with an error on our side**, you now see a normal Robo Trader page with links back, instead of a
+  bare line of text ([#550](https://github.com/guymaim/robo-trader/issues/550)).
+
+---
+
 ## 2026-11-01 — Interactive Brokers: lost connections are now noticed and repaired
 
 ### Fixed
