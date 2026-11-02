@@ -6,6 +6,18 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-11-02 — Interactive Brokers traders follow the real market calendar
+
+### Fixed
+
+- **Interactive Brokers traders** now know market holidays and early closes
+  ([#557](https://github.com/guymaim/robo-trader/issues/557)). On a holiday such as Thanksgiving they stay idle and
+  keep their buy list for the next session, instead of trying to buy at a closed market. On an early close, such as
+  November 27 and December 24, their sales decided at the close happen in the last minutes before 1:00 pm New York
+  time, instead of almost three hours after the market has closed. Alpaca traders already worked this way.
+
+---
+
 ## 2026-11-01 — Interactive Brokers: lost connections are now noticed and repaired
 
 ### Fixed
