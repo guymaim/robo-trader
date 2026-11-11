@@ -6,6 +6,30 @@ For how we maintain this file, see the project’s internal contributor rules (`
 
 ---
 
+## 2026-11-11 — Trader page: clearer activity, honest figures and one exchange rate everywhere
+
+### Fixed
+
+- **Recent activity** on a trader's page now shows errors in red and warnings in amber, and marks buys and sells
+  with a coloured bar, so a broker problem no longer looks like a routine scan line
+  ([#569](https://github.com/guymaim/robo-trader/issues/569)).
+- **P&L by symbol**: the "gains" and "losses" figures in the note are now the sums of the winning and of the losing
+  trades, as the note says, instead of per-symbol totals that hid a win inside a symbol that lost more later. The
+  per-symbol rows and the total are unchanged; the share column uses the corrected figures
+  ([#573](https://github.com/guymaim/robo-trader/issues/573)).
+- **The idle-cash note** on a trader's page no longer refers you to an entry-size note that is not on the page. It
+  states the trader's current buy size, and the rule's entry amount and cap, in the note itself, and only points at
+  the entry-size suggestion when one is shown ([#570](https://github.com/guymaim/robo-trader/issues/570)).
+- **Display currency**: amounts converted from US dollars now use the last completed hourly exchange rate, so the home
+  page and a trader's page show the same converted amount, and the "as of" time is the time of that rate
+  ([#571](https://github.com/guymaim/robo-trader/issues/571),
+  [#494](https://github.com/guymaim/robo-trader/issues/494)).
+- **The nightly trader-vs-simulation check** keeps running when the price download is throttled or the database is
+  briefly unavailable at its start: it uses the prices it already has and retries the connection
+  ([#574](https://github.com/guymaim/robo-trader/issues/574)).
+
+---
+
 ## 2026-11-02 — Interactive Brokers traders follow the real market calendar
 
 ### Fixed
